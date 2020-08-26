@@ -1,17 +1,18 @@
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-import smtplib, ssl
+import smtplib
+import ssl
 
 #Loading the password
-with open('pas.1','r') as f:
-    password=f.read()
-    
+with open('pas.1', 'r') as f:
+    password = f.read()
+
 sender_email = "rexdivakar@gmail.com"
 
 
-def email_content(ip,mail):
+def email_content(ip, mail):
     # Preview resumes by HR
-    
+
     receiver_email = mail
 
     message = MIMEMultipart("alternative")
@@ -19,7 +20,7 @@ def email_content(ip,mail):
     message["From"] = sender_email
     message["To"] = receiver_email
 
-    if ip==1:
+    if ip == 1:
         # Create the plain-text and HTML version of your message
         text = """\
         Hi,
@@ -39,9 +40,9 @@ def email_content(ip,mail):
 
         message.attach(part1)
         message.attach(part2)
-        
+
     #Mailing template to call for interview
-    elif ip==2:   
+    elif ip == 2:
         # Create the plain-text and HTML version of your message
         text = """\
         Hi,

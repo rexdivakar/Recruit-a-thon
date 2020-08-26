@@ -15,21 +15,9 @@ for root, dirs, files in os.walk("./pdf_files", topdown=False):
         print('Accessing File: '+name)
         filename = (os.path.join(root, name))
         if filename.endswith('.pdf'):
-            data=ResumeParser(filename).get_extracted_data()
-            
+            data = ResumeParser(filename).get_extracted_data()
+
             file_path = os.path.join(dat_file_storage, name)
-            
-            with open(file_path[:-4]+'.dat', 'w') as file:
-                    file.write(json.dumps(data))
 
-
-
-
-
-# SUMMARY
-
-from gensim.parsing.preprocessing import remove_stopwords
-
-summary=remove_stopwords(data)
-        
-print(summary)
+            with open(file_path[:-4]+'.json', 'w') as file:
+                file.write(json.dumps(data))
