@@ -29,7 +29,6 @@ def get_user_details(usr_id):              # to fetch the user details
 
     return(json.dumps([dict(ix) for ix in rows]))
 
-
 def get_mail_id(usr_id):                   # To fetch the mail id from the user id
     conn = sqlite3.connect(DB)
     db = conn.cursor()
@@ -45,6 +44,7 @@ def preview_mail(usr_id):
     email_content(1,get_mail_id(usr_id))                 # 1 to trigger the preview mail
     print('Preview Mail sent for Canidate_id: ',usr_id)
 
+preview_mail('277')
 
 def interview_mail(usr_id):                                   # 2 to trigger the interview mail
     print(email_content(2, get_mail_id(usr_id)))
