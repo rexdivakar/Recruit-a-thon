@@ -18,9 +18,9 @@ host = "imap.gmail.com"
 username = "testrecruitathon"
 download_folder = "pdf_files"
 
-dirpath='pdf_files'
+dirpath = 'pdf_files'
 
-shutil.rmtree('pdf_files',ignore_errors=True)
+shutil.rmtree('pdf_files', ignore_errors=True)
 os.mkdir(dirpath)
 
 if not os.path.isdir(download_folder):
