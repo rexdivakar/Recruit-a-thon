@@ -7,7 +7,7 @@ import ssl
 with open('pas.1', 'r') as f:
     password = f.read()
 
-sender_email = "rexdivakar@gmail.com"
+sender_email = "testrecruitathon@gmail.com"
 
 
 def email_content(ip, mail):
