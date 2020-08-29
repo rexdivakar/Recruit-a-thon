@@ -31,7 +31,7 @@ def dashboard():
 	c_rec=5
 	table_data = json.loads(get_all_details())
 	graph_data = json.loads(graph_dashboard())
-	return render_template('Dashboard.html',graph_data=graph_data,report="",table_data=table_data,user=user,n_app=n_app,p_inc = p_inc,c_rec=c_rec)
+	return render_template('dashboard.html',graph_data=graph_data,report="",table_data=table_data,user=user,n_app=n_app,p_inc = p_inc,c_rec=c_rec)
 
 @app.route('/results',methods=['GET','POST'])
 def results():
@@ -46,7 +46,7 @@ def results():
 		# sending the preview mail
 		# don't send to others 
 		#   preview_mail(str(request.form['report']))
-	return render_template('Dashboard.html',graph_data=graph_data,report = report,table_data=table_data,user=user,n_app=n_app,p_inc = p_inc,c_rec=c_rec)
+	return render_template('dashboard.html',graph_data=graph_data,report = report,table_data=table_data,user=user,n_app=n_app,p_inc = p_inc,c_rec=c_rec)
 	
 @app.route('/interview',methods=['GET','POST'])
 def interview():
