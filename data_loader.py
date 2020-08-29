@@ -7,7 +7,7 @@ dat_file_storage = 'dat_files'
 conn = sqlite3.connect('database.sql')
 
 cur = conn.cursor()
-cmd = '''INSERT INTO CANDIDATES (NAME,EMAIL,MOBILE_NO,SKILLS,COLLEGE_NAME, YEARS_OF_EXP,NO_OF_PAGES,QUALIFICATION,DESIGNATION,EXPERIENCE,COMPANY_NAME,YEARS_OF_EXP,NO_OF_PAGES) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)'''
+cmd = '''INSERT INTO CANDIDATES (NAME,EMAIL,MOBILE_NO,SKILLS,COLLEGE_NAME, YEARS_OF_EXP,NO_OF_PAGES,QUALIFICATION,DESIGNATION,EXPERIENCE,COMPANY_NAME,YEARS_OF_EXP,NO_OF_PAGES,LAST_UPDATED_DATE) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,DATE('now'))'''
 
 for root, dirs, files in os.walk(dat_file_storage, topdown=False):
     for name in files:

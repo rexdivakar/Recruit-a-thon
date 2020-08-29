@@ -3,6 +3,8 @@ from imbox import Imbox  # pip install imbox
 import traceback
 from datetime import date
 import datetime
+import shutil
+from dashboard import set_mail_load
 
 today = str(date.today())
 year = int(today.split('-')[0])
@@ -16,6 +18,10 @@ host = "imap.gmail.com"
 username = "testrecruitathon"
 download_folder = "pdf_files"
 
+dirpath='pdf_files'
+
+shutil.rmtree('pdf_files',ignore_errors=True)
+os.mkdir(dirpath)
 
 if not os.path.isdir(download_folder):
     os.makedirs(download_folder, exist_ok=True)
@@ -39,3 +45,5 @@ for (uid, message) in (messages):
 
 mail.logout()
 
+
+print(set_mail_load())

@@ -1,6 +1,7 @@
 import sqlite3
 import json
 from mail import email_content
+import os
 
 DB = "database.sql"
 
@@ -29,6 +30,30 @@ def get_user_details(usr_id):              # to fetch the user details
 
     return(json.dumps([dict(ix) for ix in rows]))
 
+
+def graph_dashboard():                      #graph dashboard
+    
+    conn = sqlite3.connect(DB)
+    conn.row_factory = sqlite3.Row
+    db = conn.cursor()
+    cmd = 'SELECT mail_count,date_load from mail_load'
+    rows = db.execute(cmd).fetchall()
+
+    conn.close()
+
+    return(json.dumps([dict(ix) for ix in rows]))
+
+def set_mail_load():                    # to fetch all the user details as json format
+    conn = sqlite3.connect(DB)
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
+    
+    mail_count=len(os.listdir('pdf_files'))
+    cur.execute('INSERT INTO mail_load (MAIL_COUNT,DATE_LOAD) VALUES ('+str(mail_count)+',DATE("now"))')
+    conn.commit()
+    conn.close()
+    return 'Insertion Done'
+
 def get_mail_id(usr_id):                   # To fetch the mail id from the user id
     conn = sqlite3.connect(DB)
     db = conn.cursor()
@@ -44,7 +69,6 @@ def preview_mail(usr_id):
     email_content(1,get_mail_id(usr_id))                 # 1 to trigger the preview mail
     print('Preview Mail sent for Canidate_id: ',usr_id)
 
-preview_mail('277')
 
 def interview_mail(usr_id):                                   # 2 to trigger the interview mail
     print(email_content(2, get_mail_id(usr_id)))
