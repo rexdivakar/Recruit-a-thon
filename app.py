@@ -45,7 +45,7 @@ def results():
 		report = json.loads(get_user_details(str(request.form['report'])))
 		# sending the preview mail
 		# don't send to others 
-		#   preview_mail(str(request.form['report']))
+		preview_mail(str(request.form['report']))
 	return render_template('dashboard.html',graph_data=graph_data,report = report,table_data=table_data,user=user,n_app=n_app,p_inc = p_inc,c_rec=c_rec)
 	
 @app.route('/interview',methods=['GET','POST'])
