@@ -1,11 +1,19 @@
+from extra import write_log
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import smtplib
 import ssl
 
+write_log('\nMail System triggered')
+
 #Loading the password
-with open('pas.1', 'r') as f:
-    password = f.read()
+try:
+    with open('pas.1', 'r') as f:
+        password = f.read()
+    write_log('Password load successfull')
+    
+except:
+    write_log('Password load failed')
 
 sender_email = "testrecruitathon@gmail.com"
 
@@ -40,6 +48,7 @@ def email_content(ip, mail):
 
         message.attach(part1)
         message.attach(part2)
+        write_log('Preview mail template loaded')
 
     #Mailing template to call for interview
     elif ip == 2:
@@ -62,15 +71,18 @@ def email_content(ip, mail):
 
         message.attach(part1)
         message.attach(part2)
+        write_log('Interview mail template loaded')
 
     context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-        server.login(sender_email, password)
-        server.sendmail(
-            sender_email, receiver_email, message.as_string()
-        )
+    
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+            server.login(sender_email, password)
+            server.sendmail(
+                sender_email, receiver_email, message.as_string()
+            )
+        write_log('Mail Server logged in successfully ! \nMailSent')
+    except:
+        write_log('Mail Server login failed')
 
-    return ('Mail Sent')
-
-
-# email_content(2,'rexdivakar@hotmail.com')
+    return

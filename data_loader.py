@@ -1,8 +1,11 @@
 import sqlite3
 import os
 import json
+from extra  import write_log
 
 dat_file_storage = 'dat_files'
+
+write_log('\n#Data Load Started#')
 
 conn = sqlite3.connect('database.sql')
 
@@ -11,7 +14,7 @@ cmd = '''INSERT INTO CANDIDATES (NAME,EMAIL,MOBILE_NO,SKILLS,COLLEGE_NAME, YEARS
 
 for root, dirs, files in os.walk(dat_file_storage, topdown=False):
     for name in files:
-        print('Accessing File: '+name)
+        write_log('Accessing File: '+name)
         filename = (os.path.join(root, name))
         if filename.endswith('.json'):
             with open(filename) as f:
@@ -42,8 +45,13 @@ for root, dirs, files in os.walk(dat_file_storage, topdown=False):
             total_experience = dat_obj['total_experience']
             pg_count = dat_obj['no_of_pages']
 
-            cur.execute(cmd, (name, email, mob_no, skills, college_name, total_experience, pg_count,
-                              degree, designation, experience, company_names, total_experience, pg_count))
-            conn.commit()
+            try:
+                cur.execute(cmd, (name, email, mob_no, skills, college_name, total_experience, pg_count,
+                                degree, designation, experience, company_names, total_experience, pg_count))
+                conn.commit()
+                write_log('Data loaded successfully')
+            except:
+                write_log("Data load failure")
 
 conn.close()
+write_log('\n#Data Load Finished#')

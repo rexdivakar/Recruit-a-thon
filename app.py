@@ -5,16 +5,20 @@ from flask import request,redirect,render_template,url_for
 import csv
 import json
 from dashboard import *
+from extra import write_log
 app = Flask(__name__)
 
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
+    write_log('\n#Login Page')
 	error=None
 	if request.method == 'POST':
 		if request.form['loginuser'] != 'admin' or request.form['loginPassword'] != 'admin':
 			error = 'Invalid Credentials. Please try again.'
+			write_log('$User attempted to login'+request.form['loginuser'])
 		else:
+			write_log('$User Loged in'+request.form['loginuser'])
 			return redirect("/dashboard")
 	return render_template('Login.html')
 
@@ -31,6 +35,7 @@ def dashboard():
 	c_rec=5
 	table_data = json.loads(get_all_details())
 	graph_data = json.loads(graph_dashboard())
+	write_log('#Graph Loaded')
 	return render_template('dashboard.html',graph_data=graph_data,report="",table_data=table_data,user=user,n_app=n_app,p_inc = p_inc,c_rec=c_rec)
 
 @app.route('/results',methods=['GET','POST'])
@@ -46,6 +51,7 @@ def results():
 		# sending the preview mail
 		# don't send to others 
 		preview_mail(str(request.form['report']))
+		write_log('\nPreview Mail clicked')
 	return render_template('dashboard.html',graph_data=graph_data,report = report,table_data=table_data,user=user,n_app=n_app,p_inc = p_inc,c_rec=c_rec)
 	
 @app.route('/interview',methods=['GET','POST'])
