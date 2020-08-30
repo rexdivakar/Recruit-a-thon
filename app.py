@@ -8,7 +8,6 @@ from dashboard import *
 from extra import write_log
 app = Flask(__name__)
 
-email_content(3,'rexdivakar@hotmail.com')
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
