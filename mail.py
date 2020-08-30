@@ -1,8 +1,10 @@
 from extra import write_log
 from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
+from email import encoders
 import smtplib
-import ssl
+import ssl,os
 
 write_log('\nMail System triggered')
 
@@ -73,8 +75,21 @@ def email_content(ip, mail):
         message.attach(part2)
         write_log('Interview mail template loaded')
 
-    context = ssl.create_default_context()
+    elif ip==3:
+        message['Subject'] = "Recruitathon Log File"
+        file = "logfile.log"
+        attachment = open(file,'rb')
+        
+        obj = MIMEBase('application','octet-stream')
+        obj.set_payload((attachment).read())
+        encoders.encode_base64(obj)
+        obj.add_header('Content-Disposition',"attachment; filename= "+file)
+        message.attach(obj)
+        
+        write_log('Log data sent to admin')
     
+    
+    context = ssl.create_default_context()
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
             server.login(sender_email, password)
