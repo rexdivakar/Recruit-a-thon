@@ -2,6 +2,38 @@
 <html>
 <head>
 	<title>Admin DashBoard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+
+	<!-- bar chart js -->
+   <script type="text/javascript">
+	  window.onload = function () {
+	    var chart = new CanvasJS.Chart("chartContainer",
+	    {
+
+	      title:{
+	      text: "Applications per week"
+	      },
+	      optios:{
+	      	responsive: false,
+	      	maintainAspectRatio: false,
+	      },
+	      data: [
+	      {
+	        type: "line",
+
+	        dataPoints: [
+	        {% for value in graph_data: %}
+		        { label: "{{(value.get('Date_Load'))}}", y: {{value.get('Mail_Count')}} },
+	        {%endfor%}
+	        ]
+	      }
+	      ]
+	    });
+
+	    chart.render();
+	  }
+	  </script>
+	 <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -13,7 +45,7 @@
 	<script>
 	    $(document).ready(function() {
 	      var table = $('#example').DataTable( {
-	          responsive: true
+	          responsive: false
 	      } );
 	   
 	      new $.fn.dataTable.FixedHeader( table );
@@ -37,47 +69,12 @@
 	      max-height: 100px;
 	    }
 	</style>
-	<!-- bar chart js -->
-   <script type="text/javascript">
-	  window.onload = function () {
-	    var chart = new CanvasJS.Chart("chartContainer",
-	    {
-
-	      title:{
-	      text: "Applications per week"
-	      },
-	      axisX: {
-	        valueFormatString: "MMM D",
-	        interval:1,
-	        intervalType: "day"
-	      },
-	      axisY:{
-	        includeZero: false
-
-	      },
-	      data: [
-	      {
-	        type: "line",
-
-	        dataPoints: [
-	        {% for value in graph_data: %}
-		        { x: {{(value.get('Date_Load'))}}, y: {{value.get('Mail_Count')}} },
-	        {%endfor%}
-	        ]
-	      }
-	      ]
-	    });
-
-	    chart.render();
-	  }
-	  </script>
-	 <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<style>
 		.grid-container {
 		  display: grid;
 		  grid-gap: 20px;
 		  grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr;
-		  grid-template-rows: 0.1fr 0.1fr 0.25fr 0.5fr 0.5fr 0.125fr;
+		  grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr;
 		  grid-template-areas: "Header Header Header Header Header"
 		  					   "Chart Chart summary search search"
 		  					   "Chart Chart summary report report"
@@ -89,7 +86,8 @@
 		.Chart { grid-area: Chart; background-color: white }
 		.search { grid-area: search; }
 		.Buttons { grid-area: Buttons; }
-		.Datatable { grid-area: Datatable; }
+		.Datatable { grid-area: Datatable;
+		padding-top: 50px; }
 		.report { grid-area: report;
 				border:10px solid black; }	
 		.summary { grid-area: summary;		 }
@@ -173,8 +171,10 @@
 			<p>No of Applications</p>
 			<p style="font-size: 15px;">{{n_app}}</p>
 		</div>
-		<div class="Chart" id="chartContainer">		
+		<div class="Chart">
+			<div id="chartContainer"></div>		
 		</div>
+		<br><br>
 		<div class="search">
 			<p>Enter valid candidate id here and get the consolidated results</p>
 			<div id='container'>  
