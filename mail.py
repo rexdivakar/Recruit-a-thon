@@ -77,7 +77,7 @@ def email_content(ip, mail):
 
     elif ip==3:
         message['Subject'] = "Recruitathon Log File"
-        file = "logfile.log"
+        file = "logfile.txt"
         attachment = open(file,'rb')
         
         obj = MIMEBase('application','octet-stream')

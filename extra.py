@@ -9,6 +9,6 @@ timeObj.tm_mday, timeObj.tm_mon, timeObj.tm_year, timeObj.tm_hour, timeObj.tm_mi
     
 
 def write_log(log_data):
-    f = open('logfile.log', 'a+')            
+    f = open('logfile.txt', 'a+')            
     f.write(log_data+' '+str(time_stamp())+'\n')  
     return 
