@@ -4,7 +4,7 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email import encoders
 import smtplib
-import ssl,os
+import ssl
 
 write_log('\nMail System triggered')
 
@@ -13,7 +13,7 @@ try:
     with open('pas.1', 'r') as f:
         password = f.read()
     write_log('Password load successfull')
-    
+
 except:
     write_log('Password load failed')
 
@@ -75,20 +75,19 @@ def email_content(ip, mail):
         message.attach(part2)
         write_log('Interview mail template loaded')
 
-    elif ip==3:
+    elif ip == 3:
         message['Subject'] = "Recruitathon Log File"
         file = "logfile.txt"
-        attachment = open(file,'rb')
-        
-        obj = MIMEBase('application','octet-stream')
+        attachment = open(file, 'rb')
+
+        obj = MIMEBase('application', 'octet-stream')
         obj.set_payload((attachment).read())
         encoders.encode_base64(obj)
-        obj.add_header('Content-Disposition',"attachment; filename= "+file)
+        obj.add_header('Content-Disposition', "attachment; filename= "+file)
         message.attach(obj)
-        
+
         write_log('Log data sent to admin')
-    
-    
+
     context = ssl.create_default_context()
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
