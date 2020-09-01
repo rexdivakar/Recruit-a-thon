@@ -1,9 +1,9 @@
 import sqlite3
 import os
 import json
-from extra  import write_log
+from extra import write_log
 
-dat_file_storage = 'dat_files'
+dat_file_storage = 'json_files'
 
 write_log('\n#Data Load Started#')
 
@@ -47,7 +47,7 @@ for root, dirs, files in os.walk(dat_file_storage, topdown=False):
 
             try:
                 cur.execute(cmd, (name, email, mob_no, skills, college_name, total_experience, pg_count,
-                                degree, designation, experience, company_names, total_experience, pg_count))
+                                  degree, designation, experience, company_names, total_experience, pg_count))
                 conn.commit()
                 write_log('Data loaded successfully')
             except:

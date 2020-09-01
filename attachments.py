@@ -1,9 +1,8 @@
 import os
+import shutil
 from imbox import Imbox  # pip install imbox
-import traceback
 from datetime import date
 import datetime
-import shutil
 from dashboard import set_mail_load
 from extra import write_log
 
@@ -21,21 +20,23 @@ try:
     write_log("Credentials accepeted successfully !")
 except:
     write_log("Credentials load failed successfully !")
-    
+
 host = "imap.gmail.com"
 username = "testrecruitathon"
 download_folder = "pdf_files"
 
-
-shutil.rmtree('pdf_files', ignore_errors=True)
-write_log("destroyed pdf_files folder")
-
+try:
+    shutil.rmtree(download_folder, ignore_errors=True)
+    write_log("destroyed pdf_files")
+except:
+    write_log('unable to destry pdf_files')
+    exit()
 
 if not os.path.isdir(download_folder):
     os.makedirs(download_folder, exist_ok=True)
-    write_log("created pdf_files folder")
+    write_log("created pdf_files")
 else:
-    write_log("unable to delete files")
+    write_log("unable create pdf_files")
 
 mail = Imbox(host, username=username, password=password,
              ssl=True, ssl_context=None, starttls=False)

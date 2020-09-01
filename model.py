@@ -5,14 +5,27 @@
 
 from pyresparser import ResumeParser
 import os
+import shutil
 import json
-import spacy
 from extra import write_log
 
-dat_file_storage = './dat_files'
+dat_file_storage = 'json_files'
 
 write_log('\n#Resume Parser Initiated#')
 
+try:
+    shutil.rmtree(dat_file_storage, ignore_errors=True)
+    write_log("destroyed json_files")
+except:
+    write_log('unable to destry json_files')
+    exit()
+
+if not os.path.isdir(dat_file_storage):
+    os.makedirs(dat_file_storage, exist_ok=True)
+    write_log("\ncreated json_files")
+else:
+    write_log("unable create json_files")
+    exit()
 
 try:
     for root, dirs, files in os.walk("./pdf_files", topdown=False):
@@ -34,5 +47,5 @@ try:
                 write_log('Invalid File')
 except:
     write_log('Unable to fetch pdf files')
-    
-write_log('\n#Resume Parser Ended#')
+
+write_log('\n#Resume Parser Ended#\n')
