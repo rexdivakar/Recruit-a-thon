@@ -5,8 +5,4 @@ pyresparser==1.0.6
 nltk==3.5
 PyPDF2==1.26.0
 scikit_learn==0.23.2
-<<<<<<< HEAD
-=======
-imbox
 gunicorn
->>>>>>> ade05f623b1c13d4e89bf5c79febf5ed26cd747e
