@@ -81,6 +81,28 @@ def get_mail_count():                   # To fetch the aggregate of incomming jo
     return total_cnt
 
 
+def setup_interview(usr_name,usr_email,meeting_time):                    # Interview dasboard insert
+    conn = sqlite3.connect(DB)
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
+    cmd='insert into schedule (candidate_name,candidate_email,meeting_time) values(?,?,?)'
+    cur.execute(cmd,(usr_name,usr_email,meeting_time))
+    conn.commit()
+    conn.close()
+    
+    
+def get_interview_schedule():                   # To get interview schedule
+    conn = sqlite3.connect(DB)
+    conn.row_factory = sqlite3.Row
+    db = conn.cursor()
+    cmd = 'select * from schedule where meeting_date=date("now");'
+
+    rows =db.execute(cmd).fetchall()
+    conn.close()
+
+    return(json.dumps([dict(ix) for ix in rows]))
+
+
 def preview_mail(usr_id):
     # 1 to trigger the preview mail
     email_content(1, get_mail_id(usr_id))
