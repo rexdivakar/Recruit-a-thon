@@ -1,26 +1,16 @@
-from extra import write_log
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email import encoders
 import smtplib
 import ssl
-
-write_log('\nMail System triggered')
-
-#Loading the password
-try:
-    with open('pas.1', 'r') as f:
-        password = f.read()
-    write_log('Password load successfull')
-
-except:
-    write_log('Password load failed')
+from extra import write_log, get_password
 
 sender_email = "testrecruitathon@gmail.com"
 
 
 def email_content(ip, mail):
+    write_log('\nMail System triggered')
     # Preview resumes by HR
 
     receiver_email = mail
@@ -77,7 +67,7 @@ def email_content(ip, mail):
 
     elif ip == 3:
         message['Subject'] = "Recruitathon Log File"
-        file = "logfile.txt"
+        file = "Extras\logfile.txt"
         attachment = open(file, 'rb')
 
         obj = MIMEBase('application', 'octet-stream')
@@ -91,7 +81,7 @@ def email_content(ip, mail):
     context = ssl.create_default_context()
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-            server.login(sender_email, password)
+            server.login(sender_email, get_password())
             server.sendmail(
                 sender_email, receiver_email, message.as_string()
             )

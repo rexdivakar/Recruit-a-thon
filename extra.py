@@ -10,6 +10,18 @@ def time_stamp():
 
 
 def write_log(log_data):
-    f = open('logfile.txt', 'a+')
+    f = open('Extras\logfile.txt', 'a+')
     f.write(log_data+' '+str(time_stamp())+'\n')
     return
+
+
+def get_password():
+    #Loading the password
+    try:
+        with open('Extras\pas.1', 'r') as f:
+            password = f.read()
+        write_log('Password load successfull')
+        return password
+    except:
+        write_log('Password load failed')
+        exit()

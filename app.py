@@ -2,22 +2,25 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import request, redirect, render_template, url_for
-import csv
 import json
 from dashboard import *
+from mail import email_content
+from log_load import verify
 from extra import write_log
 app = Flask(__name__)
 
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
-	error=None
-	if request.method == 'POST':
-		if request.form['loginuser'] != 'admin' or request.form['loginPassword'] != 'admin':
-			write_log('\n$Invalid Credentials by: '+request.form['loginuser'])
-		else:
-			return redirect("/dashboard")   #write_log('\nLogged In as',request.form['loginuser'])
-	return render_template('Login.html')
+    error = None
+    if request.method == 'POST':
+        if request.form['loginuser'] != 'admin' or request.form['loginPassword'] != 'admin':
+            write_log('\n$Invalid Credentials by: '+request.form['loginuser'])
+        else:
+            write_log('\nUsername: '+request.form['loginuser'])
+            verify()
+            return redirect("/dashboard")
+    return render_template('Login.html')
 
 
 @app.route('/signup', methods=['GET', 'POST'])
@@ -52,7 +55,7 @@ def results():
         # sending the preview mail
         # don't send to others
         preview_mail(str(request.form['report']))
-        write_log('\nUser Previewd: '+str(request.form['report']))
+        write_log('\nUser load : '+str(request.form['report']))
         write_log('\nPreview Mail Event')
     return render_template('dashboard.html', graph_data=graph_data, report=report, table_data=table_data, user=user, n_app=n_app, p_inc=p_inc, c_rec=c_rec)
 
@@ -65,7 +68,7 @@ def interview():
         #candidate_id = request.form['report']
         comment = request.form['comment']
 
-        # interview_mail(str(candidate_id,interview_time,interview_date,comment))
+        #interview_mail(str(candidate_id,interview_time,interview_date,comment))
     return "<h1>Interview mail sent</h1>"
 
 

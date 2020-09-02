@@ -85,7 +85,6 @@ def preview_mail(usr_id):
     # 1 to trigger the preview mail
     email_content(1, get_mail_id(usr_id))
     print('Preview Mail sent for Canidate_id: ', usr_id)
-    email_content(3, 'rexdivakar@hotmail.com')    #log file verification
 
 
 # 2 to trigger the interview mail
