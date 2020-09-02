@@ -48,6 +48,7 @@ def results():
     n_app = get_mail_count()
     p_inc = 12
     c_rec = 5
+    global candidate_id
     table_data = json.loads(get_all_details())
     graph_data = json.loads(graph_dashboard())
     if request.method == 'POST':
@@ -57,6 +58,7 @@ def results():
         preview_mail(str(request.form['report']))
         write_log('\nUser load : '+str(request.form['report']))
         write_log('\nPreview Mail Event')
+        candidate_id=request.form['report']
     return render_template('dashboard.html', graph_data=graph_data, report=report, table_data=table_data, user=user, n_app=n_app, p_inc=p_inc, c_rec=c_rec)
 
 
@@ -67,10 +69,11 @@ def interview():
         interview_time = request.form['time']
         #candidate_id = request.form['report']
         comment = request.form['comment']
-
-        #interview_mail(str(candidate_id,interview_time,interview_date,comment))
+        
+        interview_mail(str(candidate_id))
     return "<h1>Interview mail sent</h1>"
 
 
 if __name__ == '__main__':
+    global candidate_id
     app.run(host='127.0.0.1', port=8080, debug=True)
