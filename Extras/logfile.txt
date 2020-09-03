@@ -1,132 +1,55 @@
-#
-$Invalid Credentials by: as 2/9/2020 13:23:51
 
-Username: admin 2/9/2020 13:24:0
+$Invalid Credentials by: as 3/9/2020 6:2:37
 
-$Dashboard Page 2/9/2020 13:24:1
-#Graph Loaded 2/9/2020 13:24:1
+Username: admin 3/9/2020 6:2:42
+$$ Log Load Started $$ 3/9/2020 6:2:42
 
-Mail System triggered 2/9/2020 13:24:9
-Preview mail template loaded 2/9/2020 13:24:9
-Password load successfull 2/9/2020 13:24:11
+#Mail Downloader# 3/9/2020 6:2:42
+Password load successfull 3/9/2020 6:2:42
+destroyed pdf_files 3/9/2020 6:2:42
+created pdf_files 3/9/2020 6:2:42
+
+Credentials Accepted 3/9/2020 6:2:44
+Mail Downloaded from pdf_files/Kishore_Ramiyengar_L_CV.pdf 3/9/2020 6:2:45
+Mail logged out ! 3/9/2020 6:2:46
+Unique key constrain 
+Exiting mail system 3/9/2020 6:2:46
+
+#Resume Parser Initiated# 3/9/2020 6:2:46
+destroyed json_files 3/9/2020 6:2:46
+
+created json_files 3/9/2020 6:2:46
+Accessing File: Kishore_Ramiyengar_L_CV.pdf 3/9/2020 6:2:46
+Parser failed to convert./pdf_files\Kishore_Ramiyengar_L_CV.pdf 3/9/2020 6:2:51
+Parsing Done 3/9/2020 6:2:51
+
+#Resume Parser Ended# 3/9/2020 6:2:51
+destroyed pdf_files 3/9/2020 6:2:51
+
+#Data Load Started# 3/9/2020 6:2:51
+
+Accessing File: Kishore_Ramiyengar_L_CV.json 3/9/2020 6:2:51
+Data loaded successfully 3/9/2020 6:2:51
+
+#Data Load Finished# 3/9/2020 6:2:51
+Log Sent 3/9/2020 6:2:51
+$$ Log Load Ended $$ 3/9/2020 6:2:51
+
+$Dashboard Page 3/9/2020 6:2:51
+#Graph Loaded 3/9/2020 6:2:51
+
+Mail System triggered 3/9/2020 6:2:56
+Preview mail template loaded 3/9/2020 6:2:56
+Password load successfull 3/9/2020 6:2:56
 Mail Server logged in successfully ! 
-MailSent 2/9/2020 13:24:13
+MailSent 3/9/2020 6:2:59
 
-Mail System triggered 2/9/2020 13:24:13
-Log data sent to admin 2/9/2020 13:24:13
-Password load successfull 2/9/2020 13:24:14
+User load : 7 3/9/2020 6:2:59
+
+Preview Mail Event 3/9/2020 6:2:59
+
+Mail System triggered 3/9/2020 6:3:8
+Interview mail template loaded 3/9/2020 6:3:8
+Password load successfull 3/9/2020 6:3:8
 Mail Server logged in successfully ! 
-MailSent 2/9/2020 13:24:17
-
-User load : 7 2/9/2020 13:24:17
-
-Preview Mail Event 2/9/2020 13:24:17
-
-Username: admin 2/9/2020 13:26:55
-
-$Dashboard Page 2/9/2020 13:26:55
-#Graph Loaded 2/9/2020 13:26:55
-
-Mail System triggered 2/9/2020 13:27:3
-Preview mail template loaded 2/9/2020 13:27:3
-Password load successfull 2/9/2020 13:27:3
-Mail Server logged in successfully ! 
-MailSent 2/9/2020 13:27:6
-
-User load : 7 2/9/2020 13:27:6
-
-Preview Mail Event 2/9/2020 13:27:6
-
-Mail System triggered 2/9/2020 14:51:13
-Preview mail template loaded 2/9/2020 14:51:13
-Password load successfull 2/9/2020 14:51:13
-Mail Server logged in successfully ! 
-MailSent 2/9/2020 14:51:17
-
-User load : 7 2/9/2020 14:51:17
-
-Preview Mail Event 2/9/2020 14:51:17
-
-Username: admin 2/9/2020 14:51:37
-
-$Dashboard Page 2/9/2020 14:51:38
-#Graph Loaded 2/9/2020 14:51:38
-
-Mail System triggered 2/9/2020 14:51:41
-Preview mail template loaded 2/9/2020 14:51:41
-Password load successfull 2/9/2020 14:51:41
-Mail Server logged in successfully ! 
-MailSent 2/9/2020 14:51:44
-
-User load : 7 2/9/2020 14:51:44
-
-Preview Mail Event 2/9/2020 14:51:44
-
-$Dashboard Page 2/9/2020 14:52:52
-#Graph Loaded 2/9/2020 14:52:52
-
-Username: admin 2/9/2020 14:52:58
-
-$Dashboard Page 2/9/2020 14:52:58
-#Graph Loaded 2/9/2020 14:52:58
-
-Mail System triggered 2/9/2020 14:53:14
-Preview mail template loaded 2/9/2020 14:53:14
-Password load successfull 2/9/2020 14:53:15
-Mail Server logged in successfully ! 
-MailSent 2/9/2020 14:53:17
-
-User load : 7 2/9/2020 14:53:17
-
-Preview Mail Event 2/9/2020 14:53:17
-
-Username: admin 2/9/2020 14:54:58
-
-$Dashboard Page 2/9/2020 14:54:58
-#Graph Loaded 2/9/2020 14:54:58
-
-Mail System triggered 2/9/2020 14:55:0
-Preview mail template loaded 2/9/2020 14:55:0
-Password load successfull 2/9/2020 14:55:1
-Mail Server logged in successfully ! 
-MailSent 2/9/2020 14:55:4
-
-User load : 7 2/9/2020 14:55:4
-
-Preview Mail Event 2/9/2020 14:55:4
-
-Mail System triggered 2/9/2020 14:57:58
-Preview mail template loaded 2/9/2020 14:57:58
-Password load successfull 2/9/2020 14:57:59
-Mail Server logged in successfully ! 
-MailSent 2/9/2020 14:58:1
-
-User load : 7 2/9/2020 14:58:1
-
-Preview Mail Event 2/9/2020 14:58:1
-
-Mail System triggered 2/9/2020 15:0:19
-Preview mail template loaded 2/9/2020 15:0:19
-Password load successfull 2/9/2020 15:0:19
-Mail Server logged in successfully ! 
-MailSent 2/9/2020 15:0:22
-
-User load : 7 2/9/2020 15:0:22
-
-Preview Mail Event 2/9/2020 15:0:22
-
-Mail System triggered 2/9/2020 15:0:29
-Preview mail template loaded 2/9/2020 15:0:29
-Password load successfull 2/9/2020 15:0:29
-Mail Server logged in successfully ! 
-MailSent 2/9/2020 15:0:32
-
-User load : 7 2/9/2020 15:0:32
-
-Preview Mail Event 2/9/2020 15:0:32
-
-Mail System triggered 2/9/2020 15:0:42
-Interview mail template loaded 2/9/2020 15:0:42
-Password load successfull 2/9/2020 15:0:43
-Mail Server logged in successfully ! 
-MailSent 2/9/2020 15:0:45
+MailSent 3/9/2020 6:3:11
