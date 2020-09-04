@@ -4,12 +4,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Dashboard Login</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <script type="text/javascript" src="https://cldup.com/S6Ptkwu_qA.js"></script>
+  <title>Input effects by js</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css" />
   <style>
     @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
 
@@ -19,6 +15,9 @@
       background-color: #1d243d;
       padding: 0;
       margin: 0;
+      background: url({{ url_for('static', filename='source (4).gif') }}) no-repeat;
+      background-size: cover;
+      height: 100vh;
     }
 
     #particles-js {
@@ -152,7 +151,7 @@
     .dnthave {
       position: absolute;
       top: 92%;
-      left: 28%;
+      left: 35%;
     }
 
     .typcn {
@@ -167,23 +166,6 @@
     .typcn.active {
       color: #7f60eb;
     }
-
-    .error {
-      background: #ff3333;
-      text-align: center;
-      width: 337px;
-      height: 20px;
-      padding: 2px;
-      border: 0;
-      border-radius: 5px;
-      margin: 10px auto 10px;
-      position: absolute;
-      top: 31%;
-      left: 7.2%;
-      color: white;
-      display: none;
-    }
-
     .inactive {
       display: none;
     }
@@ -192,28 +174,10 @@
     } 
 
     #signup-text {
-      left: 24%;
+      left: 30%;
     }
   </style>
   <script>
-    particlesJS.load('particles-js', 'particles.json',
-        function(){
-            console.log("particles.json loaded...");
-        });
-  </script>
-  <script>
-    var pwd = document.getElementById('pwd');
-    var eye = document.getElementById('eye');
-
-    eye.addEventListener('click', togglePass);    
-
-    function togglePass() {
-
-      eye.classList.toggle('active');
-
-      (pwd.type == 'password') ? pwd.type = 'text' : pwd.type = 'password';
-    }
-
     // Form Validation
 
     function checkStuff(i) {
@@ -280,30 +244,44 @@
   </script>
 </head>
 
-<body id="particles-js">
+<body>
   <div class="animated bounceInDown">
     <div class="container">
-      <span class="error animated tada" id="msg"></span>
-      <form name="form1" method="POST" action="/" class="box" onsubmit="return checkStuff(0)">
+      {% if error!="Please contact your admin"%}
+      <form name="form1" id="formlogin" method="POST" action="/" class="box" onsubmit="return checkStuff(0)">
         <h4>Admin<span>Dashboard</span></h4>
         <h5 id="signin-text">Sign in to your account.</h5>
         <input type="text" name="loginuser" placeholder="Username" autocomplete="off">
         <i class="typcn typcn-eye" id="eye"></i>
         <input type="password" name="loginPassword" placeholder="Passsword" id="pwd" autocomplete="off">
         <input type="submit" value="Sign in" class="btn1">
+          {%if error!=""%}
+          <p style="color: white">{{error}}</p>
+          {% endif%}
+        <a href="signup" class="dnthave" id="signup-text" onclick="toggle(1)">Don’t have an account? Sign up</a>
+        {% else%}
+        <p style="color: white;padding-top:40%;font-size: 24px;">{{error}}</p>
+        <a href="/"><input type="submit" value="Back" class="btn1"></a>
       </form>
-      <form name="form1" method="POST" action="signup" class="box inactive" onsubmit="return checkStuff(1)">
-        <h4>Admin<span>Dashboard</span></h4>
-        <h5>Sign up your account.</h5>
-        <input type="text" name="username" placeholder="User Id" autocomplete="off">
-        <input type="text" name="email" placeholder="Email" autocomplete="off">
-        <i class="typcn typcn-eye" id="eye"></i>
-        <input type="password" name="password" placeholder="Passsword" id="pwd" autocomplete="off">
-        <input type="submit" value="Sign up" class="btn1">
-      </form>
-      <a href="#" class="dnthave" id="signup-text" onclick="toggle(1)">Don’t have an account? Sign up</a>
-      <a href="#" class="dnthave inactive" onclick="toggle(0)">Have an account? Sign in</a>
+      {% endif%}      
     </div>
   </div>
+  <script>    
+    const eyes = document.querySelectorAll('#eye')
+
+    for(const eye of eyes) {
+      eye.addEventListener('click', togglePass);
+    }
+
+    function togglePass(e) {
+      const eye = e.target;
+      const pwd = eye.nextElementSibling;
+
+      eye.classList.toggle('active');
+
+      (pwd.type == 'password') ? pwd.type = 'text' : pwd.type = 'password';
+    }
+  </script>
 </body>
+
 </html>
