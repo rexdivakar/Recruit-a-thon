@@ -122,15 +122,20 @@ def hash_password(password):
     pwdhash = binascii.hexlify(pwdhash)
     return (salt + pwdhash).decode('ascii')
 
-def set_user_signup(usr_name,email,pass_wrd):                  
-    conn = sqlite3.connect(DB)
-    conn.row_factory = sqlite3.Row
-    cur = conn.cursor()
-    pass_wrd=hash_password(pass_wrd)
-    cmd='insert into login_access(username,email,password) values(?,?,?)'
-    cur.execute(cmd,(usr_name,email,pass_wrd))
-    conn.commit()
-    conn.close()
+def set_user_signup(usr_name,email,pass_wrd):    
+    try:              
+        conn = sqlite3.connect(DB)
+        conn.row_factory = sqlite3.Row
+        cur = conn.cursor()
+        pass_wrd=hash_password(pass_wrd)
+        cmd='insert into login_access(username,email,password) values(?,?,?)'
+        cur.execute(cmd,(usr_name,email,pass_wrd))
+        conn.commit()
+        return True
+    except:
+        return False
+    finally:
+        conn.close()
     
 # set_user_signup('divakar','p@gmail.com','password')    
  
