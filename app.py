@@ -12,21 +12,26 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
-    error = None
+    error = ''
     if request.method == 'POST':
-        if request.form['loginuser'] != 'admin' or request.form['loginPassword'] != 'admin':
-            write_log('\n$Invalid Credentials by: '+request.form['loginuser'])
-        else:
+        ln_usr=request.form['loginuser']
+        ln_pass=request.form['loginPassword']
+        if get_login_details(ln_usr,ln_pass):
             write_log('\nUsername: '+request.form['loginuser'])
-            verify()
-            return redirect("/dashboard")
-    return render_template('Login.html')
+            #verify()
+            return redirect("/dashboard")          
+
+        else:
+            error='Invalid Credentials'
+            write_log('\n$Invalid Credentials by: '+request.form['loginuser'])
+            return render_template('new_index.html',error=error)
+        
+    return render_template('new_index.html',error=error)
 
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    error = None
-    pass
+    return render_template('new_index.html',error="Please contact your admin")
 
 
 @app.route('/dashboard', methods=['GET', 'POST'])
