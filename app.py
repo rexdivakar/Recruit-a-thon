@@ -20,7 +20,7 @@ def login():
             write_log('\nUsername: '+request.form['loginuser'])
             verify()
             return redirect("/dashboard")
-    return render_template('Login.html')
+    return render_template('new_index.html')
 
 
 @app.route('/signup', methods=['GET', 'POST'])
