@@ -53,7 +53,6 @@ def incoming():
     tdy_cnt=get_tdy_mail_count()
     return render_template("dash_board.html",graph_data=graph_data,label=2,mail_cnt=mail_cnt,tdy_cnt=tdy_cnt,notif=notif)
 
-@app.route('/reload', methods=['GET', 'POST'])
 def reload():
     verify()
     return redirect("/incoming")
