@@ -6,6 +6,7 @@ from extra import write_log
 
 dat_file_storage = 'json_files'
 
+
 def model_extract():
     write_log('\n#Resume Parser Initiated#')
     try:

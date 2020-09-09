@@ -1,1 +1,364 @@
-#
+#$$ Log Load Started $$ 9/9/2020 22:11:43
+
+#Mail Downloader# 9/9/2020 22:11:43
+Password load successfull 9/9/2020 22:11:43
+destroyed pdf_files 9/9/2020 22:11:43
+created pdf_files 9/9/2020 22:11:43
+
+Credentials Accepted 9/9/2020 22:11:45
+Mail Downloaded from pdf_files/Deepjyoti_Dutta.pdf 9/9/2020 22:11:48
+Mail Downloaded from pdf_files/Deepjyoti_Dutta.pdf 9/9/2020 22:11:50
+Mail Downloaded from pdf_files/DS PrashantBande (2).PDF 9/9/2020 22:11:50
+Mail Downloaded from pdf_files/Himanshu-Tyagi.pdf 9/9/2020 22:11:50
+Mail Downloaded from pdf_files/Jalpa-Dave.pdf 9/9/2020 22:11:50
+Mail Downloaded from pdf_files/Kishore_Ramiyengar_L_CV.pdf 9/9/2020 22:11:50
+Mail Downloaded from pdf_files/Lavajiit_Singh_CV.pdf 9/9/2020 22:11:50
+Mail Downloaded from pdf_files/Lebenslauf_Leo_20190105_ENG_TS_monitor.pdf 9/9/2020 22:11:50
+Mail Downloaded from pdf_files/Manjunath-Hegde_data-science_Jan-2019.pdf 9/9/2020 22:11:50
+Mail Downloaded from pdf_files/Mohnish-Chaudhary.pdf 9/9/2020 22:11:50
+Mail Downloaded from pdf_files/Himanshu-Tyagi.pdf 9/9/2020 22:11:53
+Mail Downloaded from pdf_files/Jalpa-Dave.pdf 9/9/2020 22:11:53
+Mail Downloaded from pdf_files/Kishore_Ramiyengar_L_CV.pdf 9/9/2020 22:11:53
+Mail Downloaded from pdf_files/Lavajiit_Singh_CV.pdf 9/9/2020 22:11:53
+Mail Downloaded from pdf_files/Lebenslauf_Leo_20190105_ENG_TS_monitor.pdf 9/9/2020 22:11:53
+Mail Downloaded from pdf_files/Manjunath-Hegde_data-science_Jan-2019.pdf 9/9/2020 22:11:53
+Mail Downloaded from pdf_files/Mohnish-Chaudhary.pdf 9/9/2020 22:11:53
+Mail Downloaded from pdf_files/nizam_ds.pdf 9/9/2020 22:11:53
+Mail Downloaded from pdf_files/Pawan_DataScience_Resume (copy).pdf 9/9/2020 22:11:53
+Mail Downloaded from pdf_files/Priyanka_s Resume DataScientist.pdf 9/9/2020 22:11:53
+Mail Downloaded from pdf_files/resume_shifana.pdf 9/9/2020 22:11:53
+Mail Downloaded from pdf_files/sandeep.pdf 9/9/2020 22:11:53
+Mail Downloaded from pdf_files/Shweta_Resume.pdf 9/9/2020 22:11:53
+Mail logged out ! 9/9/2020 22:11:54
+Updated mail count to the database 
+Exiting mail system 9/9/2020 22:11:54
+
+#Resume Parser Initiated# 9/9/2020 22:11:54
+destroyed json_files 9/9/2020 22:11:54
+
+created json_files 9/9/2020 22:11:54
+Accessing File: Deepjyoti_Dutta.pdf 9/9/2020 22:11:54
+Parser failed to convert./pdf_files\Deepjyoti_Dutta.pdf 9/9/2020 22:11:56
+Parsing Done 9/9/2020 22:11:56
+Accessing File: DS PrashantBande (2).PDF 9/9/2020 22:11:56
+Invalid File 9/9/2020 22:11:56
+Accessing File: Himanshu-Tyagi.pdf 9/9/2020 22:11:56
+Parser failed to convert./pdf_files\Himanshu-Tyagi.pdf 9/9/2020 22:11:58
+Parsing Done 9/9/2020 22:11:58
+Accessing File: Jalpa-Dave.pdf 9/9/2020 22:11:58
+Parser failed to convert./pdf_files\Jalpa-Dave.pdf 9/9/2020 22:11:59
+Parsing Done 9/9/2020 22:11:59
+Accessing File: Kishore_Ramiyengar_L_CV.pdf 9/9/2020 22:11:59
+Parser failed to convert./pdf_files\Kishore_Ramiyengar_L_CV.pdf 9/9/2020 22:12:3
+Parsing Done 9/9/2020 22:12:3
+Accessing File: Lavajiit_Singh_CV.pdf 9/9/2020 22:12:3
+Parser failed to convert./pdf_files\Lavajiit_Singh_CV.pdf 9/9/2020 22:12:5
+Parsing Done 9/9/2020 22:12:5
+Accessing File: Lebenslauf_Leo_20190105_ENG_TS_monitor.pdf 9/9/2020 22:12:5
+Parser failed to convert./pdf_files\Lebenslauf_Leo_20190105_ENG_TS_monitor.pdf 9/9/2020 22:12:6
+Parsing Done 9/9/2020 22:12:6
+Accessing File: Manjunath-Hegde_data-science_Jan-2019.pdf 9/9/2020 22:12:6
+Parser failed to convert./pdf_files\Manjunath-Hegde_data-science_Jan-2019.pdf 9/9/2020 22:12:8
+Parsing Done 9/9/2020 22:12:8
+Accessing File: Mohnish-Chaudhary.pdf 9/9/2020 22:12:8
+Parser failed to convert./pdf_files\Mohnish-Chaudhary.pdf 9/9/2020 22:12:10
+Parsing Done 9/9/2020 22:12:10
+Accessing File: nizam_ds.pdf 9/9/2020 22:12:10
+Parser failed to convert./pdf_files\nizam_ds.pdf 9/9/2020 22:12:12
+Parsing Done 9/9/2020 22:12:12
+Accessing File: Pawan_DataScience_Resume (copy).pdf 9/9/2020 22:12:12
+Parser failed to convert./pdf_files\Pawan_DataScience_Resume (copy).pdf 9/9/2020 22:12:14
+Parsing Done 9/9/2020 22:12:14
+Accessing File: Priyanka_s Resume DataScientist.pdf 9/9/2020 22:12:14
+Parser failed to convert./pdf_files\Priyanka_s Resume DataScientist.pdf 9/9/2020 22:12:17
+Parsing Done 9/9/2020 22:12:17
+Accessing File: resume_shifana.pdf 9/9/2020 22:12:17
+Parser failed to convert./pdf_files\resume_shifana.pdf 9/9/2020 22:12:19
+Parsing Done 9/9/2020 22:12:19
+Accessing File: sandeep.pdf 9/9/2020 22:12:19
+Parser failed to convert./pdf_files\sandeep.pdf 9/9/2020 22:12:21
+Parsing Done 9/9/2020 22:12:21
+Accessing File: Shweta_Resume.pdf 9/9/2020 22:12:21
+Parser failed to convert./pdf_files\Shweta_Resume.pdf 9/9/2020 22:12:23
+Parsing Done 9/9/2020 22:12:23
+
+#Resume Parser Ended# 9/9/2020 22:12:23
+destroyed pdf_files 9/9/2020 22:12:23
+
+#Data Load Started# 9/9/2020 22:12:23
+
+Accessing File: Deepjyoti_Dutta.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: Himanshu-Tyagi.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: Jalpa-Dave.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: Kishore_Ramiyengar_L_CV.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: Lavajiit_Singh_CV.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: Lebenslauf_Leo_20190105_ENG_TS_monitor.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: Manjunath-Hegde_data-science_Jan-2019.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: Mohnish-Chaudhary.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: nizam_ds.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: Pawan_DataScience_Resume (copy).json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: Priyanka_s Resume DataScientist.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: resume_shifana.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: sandeep.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+Accessing File: Shweta_Resume.json 9/9/2020 22:12:23
+Data loaded successfully 9/9/2020 22:12:23
+
+#Data Load Finished# 9/9/2020 22:12:23
+Log Sent 9/9/2020 22:12:23
+$$ Log Load Ended $$ 9/9/2020 22:12:23
+$$ Log Load Started $$ 9/9/2020 22:15:40
+
+#Mail Downloader# 9/9/2020 22:15:40
+Password load successfull 9/9/2020 22:15:40
+destroyed pdf_files 9/9/2020 22:15:40
+created pdf_files 9/9/2020 22:15:40
+
+Credentials Accepted 9/9/2020 22:15:43
+Mail Downloaded from pdf_files/Deepjyoti_Dutta.pdf 9/9/2020 22:15:45
+Mail Downloaded from pdf_files/Deepjyoti_Dutta.pdf 9/9/2020 22:15:47
+Mail Downloaded from pdf_files/DS PrashantBande (2).PDF 9/9/2020 22:15:47
+Mail Downloaded from pdf_files/Himanshu-Tyagi.pdf 9/9/2020 22:15:47
+Mail Downloaded from pdf_files/Jalpa-Dave.pdf 9/9/2020 22:15:47
+Mail Downloaded from pdf_files/Kishore_Ramiyengar_L_CV.pdf 9/9/2020 22:15:47
+Mail Downloaded from pdf_files/Lavajiit_Singh_CV.pdf 9/9/2020 22:15:47
+Mail Downloaded from pdf_files/Lebenslauf_Leo_20190105_ENG_TS_monitor.pdf 9/9/2020 22:15:47
+Mail Downloaded from pdf_files/Manjunath-Hegde_data-science_Jan-2019.pdf 9/9/2020 22:15:47
+Mail Downloaded from pdf_files/Mohnish-Chaudhary.pdf 9/9/2020 22:15:47
+Mail Downloaded from pdf_files/Himanshu-Tyagi.pdf 9/9/2020 22:15:50
+Mail Downloaded from pdf_files/Jalpa-Dave.pdf 9/9/2020 22:15:50
+Mail Downloaded from pdf_files/Kishore_Ramiyengar_L_CV.pdf 9/9/2020 22:15:50
+Mail Downloaded from pdf_files/Lavajiit_Singh_CV.pdf 9/9/2020 22:15:50
+Mail Downloaded from pdf_files/Lebenslauf_Leo_20190105_ENG_TS_monitor.pdf 9/9/2020 22:15:50
+Mail Downloaded from pdf_files/Manjunath-Hegde_data-science_Jan-2019.pdf 9/9/2020 22:15:50
+Mail Downloaded from pdf_files/Mohnish-Chaudhary.pdf 9/9/2020 22:15:50
+Mail Downloaded from pdf_files/nizam_ds.pdf 9/9/2020 22:15:50
+Mail Downloaded from pdf_files/Pawan_DataScience_Resume (copy).pdf 9/9/2020 22:15:50
+Mail Downloaded from pdf_files/Priyanka_s Resume DataScientist.pdf 9/9/2020 22:15:50
+Mail Downloaded from pdf_files/resume_shifana.pdf 9/9/2020 22:15:50
+Mail Downloaded from pdf_files/sandeep.pdf 9/9/2020 22:15:50
+Mail Downloaded from pdf_files/Shweta_Resume.pdf 9/9/2020 22:15:50
+Mail logged out ! 9/9/2020 22:15:50
+Updated mail count to the database 
+Exiting mail system 9/9/2020 22:15:50
+
+#Resume Parser Initiated# 9/9/2020 22:15:50
+destroyed json_files 9/9/2020 22:15:50
+
+created json_files 9/9/2020 22:15:50
+Accessing File: Deepjyoti_Dutta.pdf 9/9/2020 22:15:50
+Parser failed to convert./pdf_files\Deepjyoti_Dutta.pdf 9/9/2020 22:15:53
+Parsing Done 9/9/2020 22:15:53
+Accessing File: DS PrashantBande (2).PDF 9/9/2020 22:15:53
+Invalid File 9/9/2020 22:15:53
+Accessing File: Himanshu-Tyagi.pdf 9/9/2020 22:15:53
+Parser failed to convert./pdf_files\Himanshu-Tyagi.pdf 9/9/2020 22:15:55
+Parsing Done 9/9/2020 22:15:55
+Accessing File: Jalpa-Dave.pdf 9/9/2020 22:15:55
+Parser failed to convert./pdf_files\Jalpa-Dave.pdf 9/9/2020 22:15:56
+Parsing Done 9/9/2020 22:15:56
+Accessing File: Kishore_Ramiyengar_L_CV.pdf 9/9/2020 22:15:56
+Parser failed to convert./pdf_files\Kishore_Ramiyengar_L_CV.pdf 9/9/2020 22:16:0
+Parsing Done 9/9/2020 22:16:0
+Accessing File: Lavajiit_Singh_CV.pdf 9/9/2020 22:16:0
+Parser failed to convert./pdf_files\Lavajiit_Singh_CV.pdf 9/9/2020 22:16:2
+Parsing Done 9/9/2020 22:16:2
+Accessing File: Lebenslauf_Leo_20190105_ENG_TS_monitor.pdf 9/9/2020 22:16:2
+Parser failed to convert./pdf_files\Lebenslauf_Leo_20190105_ENG_TS_monitor.pdf 9/9/2020 22:16:3
+Parsing Done 9/9/2020 22:16:3
+Accessing File: Manjunath-Hegde_data-science_Jan-2019.pdf 9/9/2020 22:16:3
+Parser failed to convert./pdf_files\Manjunath-Hegde_data-science_Jan-2019.pdf 9/9/2020 22:16:6
+Parsing Done 9/9/2020 22:16:6
+Accessing File: Mohnish-Chaudhary.pdf 9/9/2020 22:16:6
+Parser failed to convert./pdf_files\Mohnish-Chaudhary.pdf 9/9/2020 22:16:7
+Parsing Done 9/9/2020 22:16:7
+Accessing File: nizam_ds.pdf 9/9/2020 22:16:7
+Parser failed to convert./pdf_files\nizam_ds.pdf 9/9/2020 22:16:9
+Parsing Done 9/9/2020 22:16:9
+Accessing File: Pawan_DataScience_Resume (copy).pdf 9/9/2020 22:16:9
+Parser failed to convert./pdf_files\Pawan_DataScience_Resume (copy).pdf 9/9/2020 22:16:11
+Parsing Done 9/9/2020 22:16:11
+Accessing File: Priyanka_s Resume DataScientist.pdf 9/9/2020 22:16:11
+Parser failed to convert./pdf_files\Priyanka_s Resume DataScientist.pdf 9/9/2020 22:16:14
+Parsing Done 9/9/2020 22:16:14
+Accessing File: resume_shifana.pdf 9/9/2020 22:16:14
+Parser failed to convert./pdf_files\resume_shifana.pdf 9/9/2020 22:16:16
+Parsing Done 9/9/2020 22:16:16
+Accessing File: sandeep.pdf 9/9/2020 22:16:16
+Parser failed to convert./pdf_files\sandeep.pdf 9/9/2020 22:16:18
+Parsing Done 9/9/2020 22:16:18
+Accessing File: Shweta_Resume.pdf 9/9/2020 22:16:18
+Parser failed to convert./pdf_files\Shweta_Resume.pdf 9/9/2020 22:16:20
+Parsing Done 9/9/2020 22:16:20
+
+#Resume Parser Ended# 9/9/2020 22:16:20
+destroyed pdf_files 9/9/2020 22:16:20
+
+#Data Load Started# 9/9/2020 22:16:20
+
+Accessing File: Deepjyoti_Dutta.json 9/9/2020 22:16:20
+Data load failure 9/9/2020 22:16:20
+
+Accessing File: Himanshu-Tyagi.json 9/9/2020 22:16:20
+Data load failure 9/9/2020 22:16:20
+
+Accessing File: Jalpa-Dave.json 9/9/2020 22:16:20
+Data loaded successfully 9/9/2020 22:16:20
+
+Accessing File: Kishore_Ramiyengar_L_CV.json 9/9/2020 22:16:20
+Data load failure 9/9/2020 22:16:20
+
+Accessing File: Lavajiit_Singh_CV.json 9/9/2020 22:16:20
+Data load failure 9/9/2020 22:16:20
+
+Accessing File: Lebenslauf_Leo_20190105_ENG_TS_monitor.json 9/9/2020 22:16:20
+Data loaded successfully 9/9/2020 22:16:20
+
+Accessing File: Manjunath-Hegde_data-science_Jan-2019.json 9/9/2020 22:16:20
+Data load failure 9/9/2020 22:16:20
+
+Accessing File: Mohnish-Chaudhary.json 9/9/2020 22:16:20
+Data loaded successfully 9/9/2020 22:16:20
+
+Accessing File: nizam_ds.json 9/9/2020 22:16:20
+Data load failure 9/9/2020 22:16:20
+
+Accessing File: Pawan_DataScience_Resume (copy).json 9/9/2020 22:16:20
+Data load failure 9/9/2020 22:16:20
+
+Accessing File: Priyanka_s Resume DataScientist.json 9/9/2020 22:16:20
+Data load failure 9/9/2020 22:16:20
+
+Accessing File: resume_shifana.json 9/9/2020 22:16:20
+Data load failure 9/9/2020 22:16:20
+
+Accessing File: sandeep.json 9/9/2020 22:16:20
+Data load failure 9/9/2020 22:16:20
+
+Accessing File: Shweta_Resume.json 9/9/2020 22:16:20
+Data load failure 9/9/2020 22:16:20
+
+#Data Load Finished# 9/9/2020 22:16:20
+Log Sent 9/9/2020 22:16:20
+$$ Log Load Ended $$ 9/9/2020 22:16:20
+
+Mail System triggered 9/9/2020 22:19:6
+Preview mail template loaded 9/9/2020 22:19:6
+Password load successfull 9/9/2020 22:19:6
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:19:9
+
+Mail System triggered 9/9/2020 22:19:44
+Preview mail template loaded 9/9/2020 22:19:44
+Password load successfull 9/9/2020 22:19:44
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:19:47
+
+Mail System triggered 9/9/2020 22:20:10
+Interview mail template loaded 9/9/2020 22:20:10
+Password load successfull 9/9/2020 22:20:11
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:20:13
+
+Mail System triggered 9/9/2020 22:24:41
+Preview mail template loaded 9/9/2020 22:24:41
+Password load successfull 9/9/2020 22:24:42
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:24:44
+
+Mail System triggered 9/9/2020 22:24:56
+Preview mail template loaded 9/9/2020 22:24:56
+Password load successfull 9/9/2020 22:24:57
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:24:59
+
+Mail System triggered 9/9/2020 22:25:8
+Interview mail template loaded 9/9/2020 22:25:8
+Password load successfull 9/9/2020 22:25:9
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:25:11
+
+Mail System triggered 9/9/2020 22:26:30
+Preview mail template loaded 9/9/2020 22:26:30
+Password load successfull 9/9/2020 22:26:30
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:26:33
+
+Mail System triggered 9/9/2020 22:26:41
+Interview mail template loaded 9/9/2020 22:26:41
+Password load successfull 9/9/2020 22:26:42
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:26:44
+
+Mail System triggered 9/9/2020 22:28:55
+Preview mail template loaded 9/9/2020 22:28:55
+Password load successfull 9/9/2020 22:28:56
+
+Mail System triggered 9/9/2020 22:28:57
+Preview mail template loaded 9/9/2020 22:28:57
+Password load successfull 9/9/2020 22:28:58
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:28:58
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:29:0
+
+Mail System triggered 9/9/2020 22:29:7
+Interview mail template loaded 9/9/2020 22:29:7
+Password load successfull 9/9/2020 22:29:7
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:29:9
+
+Mail System triggered 9/9/2020 22:30:59
+Preview mail template loaded 9/9/2020 22:30:59
+Password load successfull 9/9/2020 22:30:59
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:31:2
+
+Mail System triggered 9/9/2020 22:31:4
+Preview mail template loaded 9/9/2020 22:31:4
+Password load successfull 9/9/2020 22:31:4
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:31:7
+
+Mail System triggered 9/9/2020 22:31:14
+Interview mail template loaded 9/9/2020 22:31:14
+Password load successfull 9/9/2020 22:31:14
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:31:17
+
+Mail System triggered 9/9/2020 22:33:8
+Preview mail template loaded 9/9/2020 22:33:8
+Password load successfull 9/9/2020 22:33:9
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:33:11
+
+Mail System triggered 9/9/2020 22:33:20
+Interview mail template loaded 9/9/2020 22:33:20
+Password load successfull 9/9/2020 22:33:20
+Mail Server logged in successfully ! 
+MailSent 9/9/2020 22:33:22

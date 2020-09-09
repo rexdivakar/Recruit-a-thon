@@ -9,59 +9,52 @@ from extra import write_log, get_password
 sender_email = "testrecruitathon@gmail.com"
 
 
-def email_content(ip, mail):
+def email_content(ip, mail, meeting_date, meeting_time, content):
     write_log('\nMail System triggered')
     # Preview resumes by HR
-
+    print(ip,mail,meeting_date,meeting_time,content)
     receiver_email = mail
 
     message = MIMEMultipart("alternative")
-    message["Subject"] = "multipart test"
+
     message["From"] = sender_email
     message["To"] = receiver_email
 
     if ip == 1:
         # Create the plain-text and HTML version of your message
-        text = """\
-        Hi,
-        This is a preview mail"""
+        message["Subject"] = 'Preview Mail'
         html = """\
         <html>
         <body>
             <p>Hi,<br>
-            This is a preview mail<br>
+            This is a preview mail Test-1<br>
             </p>
         </body>
         </html>
         """
 
-        part1 = MIMEText(text, "plain")
         part2 = MIMEText(html, "html")
 
-        message.attach(part1)
         message.attach(part2)
         write_log('Preview mail template loaded')
 
     #Mailing template to call for interview
     elif ip == 2:
         # Create the plain-text and HTML version of your message
-        text = """\
-        Hi,
-        This is a Interview mail"""
+        message["Subject"] = 'Interview Mail'
+
         html = """\
         <html>
         <body>
             <p>Hi,<br>
-            This is a Interview mail<br>
+            This is a Interview mail Test-2<br>{}
             </p>
         </body>
         </html>
-        """
+        """.format(content)
 
-        part1 = MIMEText(text, "plain")
         part2 = MIMEText(html, "html")
 
-        message.attach(part1)
         message.attach(part2)
         write_log('Interview mail template loaded')
 

@@ -57,4 +57,3 @@ def data_load():
 
     conn.close()
     write_log('\n#Data Load Finished#')
-    
