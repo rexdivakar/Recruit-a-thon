@@ -89,4 +89,3 @@ def email_content(ip, mail):
         print('mail failed')
     return
 
-
