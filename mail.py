@@ -16,7 +16,6 @@ def email_content(ip, mail):
     
     message["From"] = sender_email
     message["To"] = receiver_email
-    print('Mail loaded')
 
     if ip == 1:
         # Create the plain-text and HTML version of your message
@@ -40,7 +39,6 @@ def email_content(ip, mail):
         message.attach(part1)
         message.attach(part2)
         write_log('Preview mail template loaded')
-        print('Preview mail loaded')
     #Mailing template to call for interview
     elif ip == 2:
         # Create the plain-text and HTML version of your message
@@ -64,7 +62,6 @@ def email_content(ip, mail):
         message.attach(part1)
         message.attach(part2)
         write_log('Interview mail template loaded')
-        print('Interview Mail loaded')
 
     elif ip == 3:
         message['Subject'] = "Recruitathon Log File"
@@ -76,17 +73,18 @@ def email_content(ip, mail):
         obj.add_header('Content-Disposition', "attachment; filename= "+log_file)
         message.attach(obj)
         write_log('Log data sent to admin')
-        print('log mail loaded')
 
     context = ssl.create_default_context()
-
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-        pass_wd=get_password()
-        print(sender_email,pass_wd)
-        server.login(sender_email, pass_wd)
-        server.sendmail(
-            sender_email, receiver_email, message.as_string()
-        )
-    write_log('Mail Server logged in successfully ! \nMailSent')
-
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+            pass_wd=get_password()
+            server.login(sender_email, pass_wd)
+            server.sendmail(
+                sender_email, receiver_email, message.as_string()
+            )
+        write_log('Mail Server logged in successfully ! \nMailSent')
+    except:
+        write_log('Mail Server login failed')
     return
+
+

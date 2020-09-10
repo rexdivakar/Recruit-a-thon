@@ -225,17 +225,21 @@ def get_interview_schedule():                   # To get interview schedule
 
 
 def preview_mail(usr_id):                               # 1 to trigger the preview mail
-    email_content(1, get_mail_id(usr_id), '', '', '')
+    try:
+        email_content(1, get_mail_id(usr_id))
+        return True
+    except:
+        return False
 
 
 # 2 to trigger the interview mail
-def interview_mail(usr_id, meeting_date, meeting_time, content):
+def interview_mail(usr_id):
     try:
-        email_content(2, get_mail_id(usr_id), meeting_date, meeting_time, content)
+        email_content(2, get_mail_id(usr_id))
         return 'Success'
     except:
         return 'Failure'
-#Password validation
+
 
 
 def hash_password(password):

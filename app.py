@@ -86,8 +86,13 @@ def call_interview():
         date = request.form['date']
         time = request.form['time']
         content=request.form['cmt']
-        set_interview(candidate_id,date,time,content)
-        interview_mail(candidate_id,date,time,content)
+        try:
+            set_interview(candidate_id,date,time,content)
+            interview_mail(candidate_id)
+        except:
+            candidate_id=0
+            set_interview(candidate_id,date,time,content)
+            interview_mail(candidate_id)
     return render_template("dash_board.html",report='msg',table_data=table_data,label=4,notif=notif)
 
 @app.route('/user_manag', methods=['GET', 'POST'])
