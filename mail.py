@@ -13,13 +13,13 @@ def email_content(ip, mail):
     write_log('\nMail System triggered')
     receiver_email = mail
     message = MIMEMultipart("alternative")
-    
+
     message["From"] = sender_email
     message["To"] = receiver_email
-    print('mail program',ip,mail)
+    print('mail program', ip, mail)
     if ip == 1:
         # Create the plain-text and HTML version of your message
-        message["Subject"]='Preview Mail'
+        message["Subject"] = 'Preview Mail'
         text = """\
         Hi,
         This is a preview mail"""
@@ -42,7 +42,7 @@ def email_content(ip, mail):
     #Mailing template to call for interview
     elif ip == 2:
         # Create the plain-text and HTML version of your message
-        message["Subject"]='Interview Mail'
+        message["Subject"] = 'Interview Mail'
         text = """\
         Hi,
         This is a Interview mail"""
@@ -70,14 +70,15 @@ def email_content(ip, mail):
         obj = MIMEBase('application', 'octet-stream')
         obj.set_payload((attachment).read())
         encoders.encode_base64(obj)
-        obj.add_header('Content-Disposition', "attachment; filename= "+log_file)
+        obj.add_header('Content-Disposition',
+                       "attachment; filename= "+log_file)
         message.attach(obj)
         write_log('Log data sent to admin')
 
     context = ssl.create_default_context()
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-            pass_wd=get_password()
+            pass_wd = get_password()
             server.login(sender_email, pass_wd)
             server.sendmail(
                 sender_email, receiver_email, message.as_string()
@@ -88,4 +89,3 @@ def email_content(ip, mail):
         write_log('Mail Server login failed')
         print('mail failed')
     return
-
