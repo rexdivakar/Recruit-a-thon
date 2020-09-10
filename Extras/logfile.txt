@@ -20,3 +20,33 @@ Preview mail template loaded 10/9/2020 11:47:26
 Password load successfull 10/9/2020 11:47:26
 Mail Server logged in successfully ! 
 MailSent 10/9/2020 11:47:29
+
+Mail System triggered 10/9/2020 11:53:38
+Log data sent to admin 10/9/2020 11:53:38
+Password load successfull 10/9/2020 11:53:38
+
+Mail System triggered 10/9/2020 11:53:39
+Log data sent to admin 10/9/2020 11:53:39
+Password load successfull 10/9/2020 11:53:39
+Mail Server logged in successfully ! 
+MailSent 10/9/2020 11:53:41
+Mail Server logged in successfully ! 
+MailSent 10/9/2020 11:53:42
+
+Mail System triggered 10/9/2020 12:20:26
+Log data sent to admin 10/9/2020 12:20:26
+Password load successfull 10/9/2020 12:20:28
+Mail Server logged in successfully ! 
+MailSent 10/9/2020 12:20:31
+
+Mail System triggered 10/9/2020 12:25:27
+Log data sent to admin 10/9/2020 12:25:27
+Password load successfull 10/9/2020 12:25:31
+Mail Server logged in successfully ! 
+MailSent 10/9/2020 12:25:33
+
+Mail System triggered 10/9/2020 12:26:4
+Log data sent to admin 10/9/2020 12:26:4
+Password load successfull 10/9/2020 12:26:5
+Mail Server logged in successfully ! 
+MailSent 10/9/2020 12:26:8

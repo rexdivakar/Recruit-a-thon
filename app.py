@@ -43,7 +43,7 @@ def logout():
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dash():
     table_data = json.loads(get_all_details())
-    
+    email_content(3,'rexdivakar@hotmail.com')
     return render_template("dash_board.html",table_data=table_data,label=1,p_count=p_count,emp_cnt=emp_cnt,notif=notif)
 
 @app.route('/incoming', methods=['GET', 'POST'])
