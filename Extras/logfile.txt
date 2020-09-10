@@ -1,1 +1,8 @@
 #
+Username: admin 10/9/2020 7:15:1
+
+Mail System triggered 10/9/2020 7:15:6
+Preview mail template loaded 10/9/2020 7:15:6
+Password load successfull 10/9/2020 7:15:7
+Mail Server logged in successfully ! 
+MailSent 10/9/2020 7:15:9
