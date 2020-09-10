@@ -16,7 +16,7 @@ def email_content(ip, mail):
     
     message["From"] = sender_email
     message["To"] = receiver_email
-
+    print('mail program',ip,mail)
     if ip == 1:
         # Create the plain-text and HTML version of your message
         message["Subject"]='Preview Mail'
@@ -82,9 +82,11 @@ def email_content(ip, mail):
             server.sendmail(
                 sender_email, receiver_email, message.as_string()
             )
+        print('mail sent')
         write_log('Mail Server logged in successfully ! \nMailSent')
     except:
         write_log('Mail Server login failed')
+        print('mail failed')
     return
 
 
