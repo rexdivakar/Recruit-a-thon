@@ -79,16 +79,10 @@ def email_content(ip, mail, meeting_date, meeting_time, content):
         print('log mail loaded')
 
     context = ssl.create_default_context()
-    try:
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-            server.login(sender_email, get_password())
-            server.sendmail(
-                sender_email, receiver_email, message.as_string()
-            )
-        write_log('Mail Server logged in successfully ! \nMailSent')
-        print('mail sent succs')
-    except:
-        write_log('Mail Server login failed')
-        print('mail failed')
 
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+        server.login(sender_email, get_password())
+        server.sendmail(
+            sender_email, receiver_email, message.as_string()
+        )
     return
