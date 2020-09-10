@@ -5,6 +5,6 @@ sched = BlockingScheduler()
 
 @sched.scheduled_job('interval', minutes=1)
 def timed_job():
-    email_content(3,'rexdivakar@hotmail.com','','','Log file for recruitathon')
+    email_content(3,'rexdivakar@hotmail.com')
     
 timed_job()
