@@ -10,6 +10,8 @@ from log_load import verify
 from extra import write_log
 app = Flask(__name__)
 
+from test import mail
+
 p_count=get_project_grp()
 emp_cnt=get_emp_cnt()
 notif=get_interview_schedule()
@@ -43,7 +45,7 @@ def logout():
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dash():
     table_data = json.loads(get_all_details())
-    email_content(3,'rexdivakar@hotmail.com')
+    mail()
     return render_template("dash_board.html",table_data=table_data,label=1,p_count=p_count,emp_cnt=emp_cnt,notif=notif)
 
 @app.route('/incoming', methods=['GET', 'POST'])
