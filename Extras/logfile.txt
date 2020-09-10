@@ -25,3 +25,27 @@ Log data sent to admin 10/9/2020 7:31:3
 Password load successfull 10/9/2020 7:31:3
 Mail Server logged in successfully ! 
 MailSent 10/9/2020 7:31:6
+
+Mail System triggered 10/9/2020 7:34:24
+Log data sent to admin 10/9/2020 7:34:24
+Password load successfull 10/9/2020 7:34:25
+Mail Server logged in successfully ! 
+MailSent 10/9/2020 7:34:28
+
+Mail System triggered 10/9/2020 7:36:3
+Log data sent to admin 10/9/2020 7:36:3
+Password load successfull 10/9/2020 7:36:3
+Mail Server logged in successfully ! 
+MailSent 10/9/2020 7:36:6
+
+Mail System triggered 10/9/2020 7:37:14
+Preview mail template loaded 10/9/2020 7:37:14
+Password load successfull 10/9/2020 7:37:14
+Mail Server logged in successfully ! 
+MailSent 10/9/2020 7:37:17
+
+Mail System triggered 10/9/2020 7:38:33
+Preview mail template loaded 10/9/2020 7:38:33
+Password load successfull 10/9/2020 7:38:33
+Mail Server logged in successfully ! 
+MailSent 10/9/2020 7:38:36
