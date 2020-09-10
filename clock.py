@@ -6,3 +6,7 @@ sched = BlockingScheduler()
 @sched.scheduled_job('interval', minutes=3)
 def timed_job():
     email_content(3,'','','','')
+    
+    
+    
+timed_job()
