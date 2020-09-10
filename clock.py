@@ -3,10 +3,8 @@ from mail import email_content
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('interval', minutes=3)
+@sched.scheduled_job('interval', minutes=1)
 def timed_job():
-    email_content(3,'','','','')
-    
-    
+    email_content(3,'rexdivakar@hotmail.com','','','Log file for recruitathon')
     
 timed_job()

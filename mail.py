@@ -11,64 +11,69 @@ sender_email = "testrecruitathon@gmail.com"
 
 def email_content(ip, mail, meeting_date, meeting_time, content):
     write_log('\nMail System triggered')
-    # Preview resumes by HR
-    print(ip,mail,meeting_date,meeting_time,content)
     receiver_email = mail
-
     message = MIMEMultipart("alternative")
-
+    
     message["From"] = sender_email
     message["To"] = receiver_email
 
+
     if ip == 1:
         # Create the plain-text and HTML version of your message
-        message["Subject"] = 'Preview Mail'
+        message["Subject"]='Preview Mail'
+        text = """\
+        Hi,
+        This is a preview mail"""
         html = """\
         <html>
         <body>
             <p>Hi,<br>
-            This is a preview mail Test-1<br>
+            This is a preview mail<br>
             </p>
         </body>
         </html>
         """
 
+        part1 = MIMEText(text, "plain")
         part2 = MIMEText(html, "html")
 
+        message.attach(part1)
         message.attach(part2)
         write_log('Preview mail template loaded')
 
     #Mailing template to call for interview
     elif ip == 2:
         # Create the plain-text and HTML version of your message
-        message["Subject"] = 'Interview Mail'
-
+        message["Subject"]='Interview Mail'
+        text = """\
+        Hi,
+        This is a Interview mail"""
         html = """\
         <html>
         <body>
             <p>Hi,<br>
-            This is a Interview mail Test-2<br>{}
+            This is a Interview mail<br>
             </p>
         </body>
         </html>
-        """.format(content)
+        """
 
+        part1 = MIMEText(text, "plain")
         part2 = MIMEText(html, "html")
 
+        message.attach(part1)
         message.attach(part2)
         write_log('Interview mail template loaded')
 
     elif ip == 3:
         message['Subject'] = "Recruitathon Log File"
-        file = "Extras\logfile.txt"
-        attachment = open(file, 'rb')
-
+        log_file = "Extras\logfile.txt"
+        attachment = open(log_file, 'rb')
         obj = MIMEBase('application', 'octet-stream')
         obj.set_payload((attachment).read())
         encoders.encode_base64(obj)
-        obj.add_header('Content-Disposition', "attachment; filename= "+file)
+        obj.add_header('Content-Disposition', "attachment; filename= "+log_file)
         message.attach(obj)
-
         write_log('Log data sent to admin')
 
     context = ssl.create_default_context()
