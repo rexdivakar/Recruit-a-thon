@@ -667,10 +667,21 @@
                   {% endif %}
                 {% else: %}
                 <div class="um-1">
-                  
+                  <div style="float:left;">
+                    <img src="{{url_for("static",filename="github.PNG")}}" height="150px" width="150px" style="border-radius: 50%;"><br>                    <h3>Aakash here!</h3>
+                  </div>
+                  <div style="float:left">
+                    {{ data1|markdown }}                    
+                  </div>
                 </div>
                 <div class="um-2">
-
+                  <div style="float:left;">
+                    <img src="{{url_for("static",filename="divakar.png")}}" height="175px" width="175px" style="border-radius: 50%;">
+                    <h3>Hi, I'm Divakar</h3>
+                    </div>
+                  <div style="float:left">
+                    {{ data2|markdown }}                    
+                  </div>
                 </div>
                 {% endif %}
         </div>
