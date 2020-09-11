@@ -10,7 +10,7 @@ from log_load import verify
 from extra import write_log
 app = Flask(__name__)
 
-from test import mail
+
 
 p_count=get_project_grp()
 emp_cnt=get_emp_cnt()
