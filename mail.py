@@ -6,7 +6,7 @@ import smtplib
 import ssl
 from extra import write_log, get_password
 
-sender_email = "testrecruitathon@gmail.com"
+sender_email = "apikey"
 
 
 def email_content(ip, mail):
@@ -77,7 +77,7 @@ def email_content(ip, mail):
 
     context = ssl.create_default_context()
     try:
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+        with smtplib.SMTP_SSL("smtp.sendgrid.net", 465, context=context) as server:
             pass_wd = get_password()
             server.login(sender_email, pass_wd)
             server.sendmail(
