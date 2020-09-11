@@ -1,11 +1,12 @@
 import os
 import shutil
-from imbox import Imbox  # pip install imbox
+from imbox import Imbox
 from datetime import date
 import datetime
 from dashboard import set_mail_load
 from extra import write_log, get_password
 
+# fetches the current date for email downloading
 today = str(date.today())
 year = int(today.split('-')[0])
 month = int(today.split('-')[1])

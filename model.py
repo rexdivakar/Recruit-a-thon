@@ -31,9 +31,9 @@ def model_extract():
                 if filename.endswith('.pdf'):
                     try:
                         data = ResumeParser(filename).get_extracted_data()
-                        write_log('Parser failed to convert'+filename)
+                        write_log('Partially extracted all features'+filename)
                     except:
-                        write_log('Parsing completed'+filename)
+                        write_log('Features extracted '+filename)
 
                     file_path = os.path.join(dat_file_storage, name)
                     with open(file_path[:-4]+'.json', 'w') as file:
@@ -51,8 +51,3 @@ def model_extract():
         write_log("destroyed pdf_files")
     except:
         write_log('unable to destry pdf_files')
-
-
-# pip install pyresparser
-# python -m nltk.downloader words
-# python -m spacy download en_core_web_sm

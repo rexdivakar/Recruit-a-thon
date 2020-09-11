@@ -1,4 +1,4 @@
-from apscheduler.schedulers.blocking import BlockingScheduler
+from apscheduler.schedulers.blocking import BlockingScheduler               # Online backend engine scheduler for heroku
 from mail import email_content
 
 sched = BlockingScheduler()

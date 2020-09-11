@@ -39,7 +39,7 @@ def get_user_details(usr_id):              # to fetch the user details
         conn.close()
 
 
-def get_emp_details():
+def get_emp_details():                  # to fetch the employee details
     try:
         conn = sqlite3.connect(DB)
         conn.row_factory = sqlite3.Row
@@ -100,7 +100,7 @@ def get_mail_id(usr_id):                   # To fetch the mail id from the user 
         conn.close()
 
 
-def get_usr_name(usr_id):
+def get_usr_name(usr_id):               # to get the username
     try:
         conn = sqlite3.connect(DB)
         db = conn.cursor()
@@ -115,7 +115,7 @@ def get_usr_name(usr_id):
         conn.close()
 
 
-def get_emp_cnt():
+def get_emp_cnt():                      # To fetch the employee count for the dashboard
     try:
         conn = sqlite3.connect(DB)
         db = conn.cursor()
@@ -128,7 +128,7 @@ def get_emp_cnt():
         conn.close()
 
 
-def get_project_grp():
+def get_project_grp():                 # To get the project code group for the dashboard
     try:
         conn = sqlite3.connect(DB)
         db = conn.cursor()
@@ -143,7 +143,7 @@ def get_project_grp():
         conn.close()
 
 
-def get_total_salary():
+def get_total_salary():                # to get the salary of the employees
     try:
         conn = sqlite3.connect(DB)
         db = conn.cursor()
@@ -188,8 +188,7 @@ def get_tdy_mail_count():                   # To fetch the aggregate of incommin
         conn.close()
 
 
-# Interview dasboard insert
-def set_interview(usr_id, meeting_date, meeting_time, content):
+def set_interview(usr_id, meeting_date, meeting_time, content):                     # Interview dasboard insert
     try:
         usr_email = get_mail_id(usr_id)
         usr_name = get_usr_name(usr_id)
@@ -232,8 +231,7 @@ def preview_mail(usr_id):                               # 1 to trigger the previ
         return False
 
 
-# 2 to trigger the interview mail
-def interview_mail(usr_id):
+def interview_mail(usr_id):                             # 2 to trigger the interview mail
     try:
         email_content(2, get_mail_id(usr_id))
         return 'Success'
@@ -242,7 +240,7 @@ def interview_mail(usr_id):
 
 
 
-def hash_password(password):
+def hash_password(password):                            # password hashing system
     """Hash a password for storing."""
     salt = hashlib.sha256(os.urandom(30)).hexdigest().encode('ascii')
     pwdhash = hashlib.pbkdf2_hmac('sha512', password.encode('utf-8'),
@@ -251,7 +249,7 @@ def hash_password(password):
     return (salt + pwdhash).decode('ascii')
 
 
-def set_user_signup(usr_name, email, pass_wrd):
+def set_user_signup(usr_name, email, pass_wrd):         # User signup system
     try:
         N = 4
         scrt_id = ''.join(random.choice(
@@ -269,10 +267,8 @@ def set_user_signup(usr_name, email, pass_wrd):
     finally:
         conn.close()
 
-# set_user_signup('divakar','p@gmail.com','password')
 
-
-def verify_password(stored_password, provided_password):
+def verify_password(stored_password, provided_password):                # Password hashing system to verify the login password to the DB
     """Verify a stored password against one provided by user"""
     salt = stored_password[:64]
     stored_password = stored_password[64:]
@@ -284,7 +280,7 @@ def verify_password(stored_password, provided_password):
     return pwdhash == stored_password
 
 
-def get_login_details(usr_name, pass_wrd):
+def get_login_details(usr_name, pass_wrd):                              # Fetches the login details to the dashboard
     conn = sqlite3.connect(DB)
     db = conn.cursor()
     try:
@@ -300,7 +296,7 @@ def get_login_details(usr_name, pass_wrd):
         conn.close()
         
         
-def set_forgot_password(scrt_id,usr_name,usr_pswd):                    
+def set_forgot_password(scrt_id,usr_name,usr_pswd):                 # To set forgot password       
     conn = sqlite3.connect(DB)
     cmd = 'update  login_access set password=? where username=? and secret_id =?'
     try:
@@ -310,5 +306,44 @@ def set_forgot_password(scrt_id,usr_name,usr_pswd):
         return 'Update Successfull !'
     except:
         return 'Update Failed'
+    finally:
+        conn.close()
+
+
+# Adding new employees
+
+def set_new_emp(usr_id,pr_code, salary):
+    try:
+        conn = sqlite3.connect(DB)
+        db = conn.cursor()
+        op=json.loads(candidate_pulldb(usr_id))[0]
+        name=op['NAME']
+        email=op['EMAIL']
+        mob_no=op['MOBILE_NO']
+        skills=op['SKILLS']
+        colg_name=op['COLLEGE_NAME'] 
+        qualification=op['QUALIFICATION']
+        designation=op['DESIGNATION']
+        yrs_emp=op['YEARS_OF_EXP']
+        cmd = 'insert into EMPLOYEES(name,project_code,salary,email,mobile_no,skills,college_name,QUALIFICATION,DESIGNATION,YEARS_OF_EXP,LAST_UPDATED_DATE)  values(?,?,?,?,?,?,?,?,?,?,DATE("now"))'
+        db.execute(cmd,(name,pr_code,salary,email,mob_no,skills,colg_name,qualification,designation,yrs_emp))
+        conn.commit()
+        return 'Success !'
+    except:
+        return 'Insert Failed !'
+    finally:
+        conn.close()
+
+
+def candidate_pulldb(usr_id):
+    try:
+        conn = sqlite3.connect(DB)
+        conn.row_factory = sqlite3.Row
+        db = conn.cursor()
+        cmd = 'select name,email,mobile_no,skills,college_name,qualification,designation,EXPERIENCE ,company_name,years_of_exp from CANDIDATES where id=?'
+        rows = db.execute(cmd, (usr_id)).fetchall()
+        return json.dumps([dict(ix) for ix in rows])
+    except:
+        return None
     finally:
         conn.close()

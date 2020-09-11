@@ -5,9 +5,8 @@ from extra import write_log
 
 dat_file_storage = 'json_files'
 
-
-def data_load():
-
+#loads data into the SQLITE3 database
+def data_load():                        
     write_log('\n#Data Load Started#')
     conn = sqlite3.connect('database.sql')
 

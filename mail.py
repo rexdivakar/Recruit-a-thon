@@ -6,7 +6,7 @@ import smtplib
 import ssl
 from extra import write_log, get_password
 
-sender_email = "apikey"
+sender_email = "testrecruitathon@gmail.com"
 
 
 def email_content(ip, mail):
@@ -16,7 +16,6 @@ def email_content(ip, mail):
 
     message["From"] = sender_email
     message["To"] = receiver_email
-    print('mail program', ip, mail)
     if ip == 1:
         # Create the plain-text and HTML version of your message
         message["Subject"] = 'Preview Mail'
@@ -77,15 +76,14 @@ def email_content(ip, mail):
 
     context = ssl.create_default_context()
     try:
-        with smtplib.SMTP_SSL("smtp.sendgrid.net", 465, context=context) as server:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
             pass_wd = get_password()
             server.login(sender_email, pass_wd)
             server.sendmail(
                 sender_email, receiver_email, message.as_string()
             )
-        print('mail sent')
         write_log('Mail Server logged in successfully ! \nMailSent')
     except:
         write_log('Mail Server login failed')
-        print('mail failed')
+    write_log('\nMail System Ended')
     return
