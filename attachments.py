@@ -1,15 +1,17 @@
 import os
 import shutil
-from imbox import Imbox  # pip install imbox
+from imbox import Imbox
 from datetime import date
 import datetime
 from dashboard import set_mail_load
-from extra import write_log,get_password
+from extra import write_log, get_password
 
+# fetches the current date for email downloading
 today = str(date.today())
 year = int(today.split('-')[0])
 month = int(today.split('-')[1])
 day = int(today.split('-')[2])
+
 
 def mail_downloader():
     write_log('\n'+"#Mail Downloader#")
@@ -17,7 +19,7 @@ def mail_downloader():
     host = "imap.gmail.com"
     username = "testrecruitathon"
     download_folder = "pdf_files"
-    password=get_password()
+    password = get_password()
 
     try:
         shutil.rmtree(download_folder, ignore_errors=True)
@@ -32,9 +34,9 @@ def mail_downloader():
     else:
         write_log("unable create pdf_files")
 
-    try:    
+    try:
         mail = Imbox(host, username=username, password=password,
-                    ssl=True, ssl_context=None, starttls=False)
+                     ssl=True, ssl_context=None, starttls=False)
         messages = mail.messages(date__on=datetime.date(
             year, month, day))  # defaults to inbox
         write_log('\nCredentials Accepted')
@@ -53,7 +55,6 @@ def mail_downloader():
                 with open(download_path, "wb") as fp:
                     fp.write(attachment.get('content').read())
 
-
     mail.logout()
     write_log("Mail logged out !")
 
@@ -62,4 +63,3 @@ def mail_downloader():
         write_log("Updated mail count to the database \nExiting mail system")
     except:
         write_log('Unique key constrain \nExiting mail system')
-

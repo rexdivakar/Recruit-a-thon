@@ -11,17 +11,14 @@ sender_email = "testrecruitathon@gmail.com"
 
 def email_content(ip, mail):
     write_log('\nMail System triggered')
-    # Preview resumes by HR
-
     receiver_email = mail
-
     message = MIMEMultipart("alternative")
-    message["Subject"] = "multipart test"
+
     message["From"] = sender_email
     message["To"] = receiver_email
-
     if ip == 1:
         # Create the plain-text and HTML version of your message
+        message["Subject"] = 'Preview Mail'
         text = """\
         Hi,
         This is a preview mail"""
@@ -41,10 +38,10 @@ def email_content(ip, mail):
         message.attach(part1)
         message.attach(part2)
         write_log('Preview mail template loaded')
-
     #Mailing template to call for interview
     elif ip == 2:
         # Create the plain-text and HTML version of your message
+        message["Subject"] = 'Interview Mail'
         text = """\
         Hi,
         This is a Interview mail"""
@@ -67,26 +64,26 @@ def email_content(ip, mail):
 
     elif ip == 3:
         message['Subject'] = "Recruitathon Log File"
-        file = "Extras\logfile.txt"
-        attachment = open(file, 'rb')
-
+        log_file = r"Extras\logfile.txt"
+        attachment = open(log_file, 'rb')
         obj = MIMEBase('application', 'octet-stream')
         obj.set_payload((attachment).read())
         encoders.encode_base64(obj)
-        obj.add_header('Content-Disposition', "attachment; filename= "+file)
+        obj.add_header('Content-Disposition',
+                       "attachment; filename= "+log_file)
         message.attach(obj)
-
         write_log('Log data sent to admin')
 
     context = ssl.create_default_context()
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-            server.login(sender_email, get_password())
+            pass_wd = get_password()
+            server.login(sender_email, pass_wd)
             server.sendmail(
                 sender_email, receiver_email, message.as_string()
             )
         write_log('Mail Server logged in successfully ! \nMailSent')
     except:
         write_log('Mail Server login failed')
-
+    write_log('\nMail System Ended')
     return

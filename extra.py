@@ -1,7 +1,6 @@
 import time
 
-
-def time_stamp():
+def time_stamp():               # fetches time stamp for the log Input
     secondsSinceEpoch = time.time()
     timeObj = time.localtime(secondsSinceEpoch)
 
@@ -9,16 +8,15 @@ def time_stamp():
         timeObj.tm_mday, timeObj.tm_mon, timeObj.tm_year, timeObj.tm_hour, timeObj.tm_min, timeObj.tm_sec))
 
 
-def write_log(log_data):
-    f = open('Extras\logfile.txt', 'a+')
+def write_log(log_data):        # writes log
+    f = open(r'Extras\logfile.txt', 'a+')
     f.write(log_data+' '+str(time_stamp())+'\n')
     return
 
 
-def get_password():
-    #Loading the password
+def get_password():             #Loads the password
     try:
-        with open('Extras\pas.1', 'r') as f:
+        with open(r'Extras\pas.1', 'r') as f:
             password = f.read()
         write_log('Password load successfull')
         return password
