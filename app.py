@@ -48,7 +48,7 @@ def logout():
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dash():
     notif = get_interview_schedule()
-    table_data = json.loads(get_all_details())
+    table_data = json.loads(get_emp_details())
     write_log('# Dashboard Page Loaded')
     return render_template("dash_board.html", table_data=table_data, label=1, p_count=p_count, emp_cnt=emp_cnt, notif=notif)
 

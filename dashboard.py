@@ -68,19 +68,20 @@ def graph_dashboard():  # graph dashboard
         conn.close()
 
 
-def set_mail_load():                    # to fetch all the user details as json format
+def set_mail_load():                                    #Updates incomming mail count for everyday count
+    conn = sqlite3.connect(DB)
+    mail_count = len(os.listdir('pdf_files'))
+    cmd_up='update Mail_load set Mail_Count = '+str(mail_count)+' where Date_Load= DATE("now");'
+    cmd_ins='INSERT INTO mail_load (MAIL_COUNT,DATE_LOAD) VALUES (' + str(mail_count)+',DATE("now"))'
     try:
-        conn = sqlite3.connect(DB)
-        conn.row_factory = sqlite3.Row
-        cur = conn.cursor()
-
-        mail_count = len(os.listdir('pdf_files'))
-        cur.execute('INSERT INTO mail_load (MAIL_COUNT,DATE_LOAD) VALUES (' +
-                    str(mail_count)+',DATE("now"))')
+        conn.execute(cmd_ins)
         conn.commit()
-        return mail_count
+        print('try')
     except:
-        pass
+        conn.execute(cmd_up)
+        conn.commit()
+        print(cmd_up)
+        print('except')
     finally:
         conn.close()
 

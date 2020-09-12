@@ -1,233 +1,157 @@
+# Dashboard Page Loaded 12/9/2020 7:17:46
+$$ Log Load Started $$ 12/9/2020 7:17:53
 
-Username: admin 11/9/2020 15:20:50
-# Dashboard Page Loaded 11/9/2020 15:20:50
-$$ Log Load Started $$ 11/9/2020 15:20:58
+#Mail Downloader# 12/9/2020 7:17:53
+Password load successfull 12/9/2020 7:17:53
+destroyed pdf_files 12/9/2020 7:17:53
+created pdf_files 12/9/2020 7:17:53
 
-#Mail Downloader# 11/9/2020 15:20:58
-Password load successfull 11/9/2020 15:20:58
-destroyed pdf_files 11/9/2020 15:20:58
-created pdf_files 11/9/2020 15:20:58
-
-Credentials Accepted 11/9/2020 15:21:0
-Mail Downloaded from pdf_files/Resume.pdf 11/9/2020 15:21:1
-Mail logged out ! 11/9/2020 15:21:2
+Credentials Accepted 12/9/2020 7:17:55
+Mail Downloaded from pdf_files/Snehit Vaddi Resume PDF-1.pdf 12/9/2020 7:17:57
+Mail Downloaded from pdf_files/Merugu's Resume.pdf 12/9/2020 7:17:58
+Mail Downloaded from pdf_files/Snehit Vaddi Resume PDF-1.pdf 12/9/2020 7:17:58
+Mail Downloaded from pdf_files/SumitSChawla_MLDeveloper.pdf 12/9/2020 7:17:58
+Mail Downloaded from pdf_files/Aditya_Kulkarni_Resume.pdf 12/9/2020 7:18:0
+Mail Downloaded from pdf_files/Aishwarya_Swetha_Data_Science.pdf 12/9/2020 7:18:0
+Mail Downloaded from pdf_files/Ashwini.resume.pdf 12/9/2020 7:18:0
+Mail Downloaded from pdf_files/Deepak Raghavendar CV.pdf 12/9/2020 7:18:0
+Mail logged out ! 12/9/2020 7:18:0
 Updated mail count to the database 
-Exiting mail system 11/9/2020 15:21:2
+Exiting mail system 12/9/2020 7:18:0
 
-#Resume Parser Initiated# 11/9/2020 15:21:2
-destroyed json_files 11/9/2020 15:21:2
+#Resume Parser Initiated# 12/9/2020 7:18:0
+destroyed json_files 12/9/2020 7:18:0
 
-created json_files 11/9/2020 15:21:2
-Accessing File: Resume.pdf 11/9/2020 15:21:2
-Partially extracted all features./pdf_files\Resume.pdf 11/9/2020 15:21:4
-Parsing Done 11/9/2020 15:21:4
+created json_files 12/9/2020 7:18:0
+Accessing File: Aditya_Kulkarni_Resume.pdf 12/9/2020 7:18:0
+Partially extracted all features./pdf_files\Aditya_Kulkarni_Resume.pdf 12/9/2020 7:18:2
+Parsing Done 12/9/2020 7:18:2
+Accessing File: Aishwarya_Swetha_Data_Science.pdf 12/9/2020 7:18:2
+Partially extracted all features./pdf_files\Aishwarya_Swetha_Data_Science.pdf 12/9/2020 7:18:4
+Parsing Done 12/9/2020 7:18:4
+Accessing File: Ashwini.resume.pdf 12/9/2020 7:18:4
+Partially extracted all features./pdf_files\Ashwini.resume.pdf 12/9/2020 7:18:5
+Parsing Done 12/9/2020 7:18:5
+Accessing File: Deepak Raghavendar CV.pdf 12/9/2020 7:18:5
+Partially extracted all features./pdf_files\Deepak Raghavendar CV.pdf 12/9/2020 7:18:7
+Parsing Done 12/9/2020 7:18:7
+Accessing File: Merugu's Resume.pdf 12/9/2020 7:18:7
+Partially extracted all features./pdf_files\Merugu's Resume.pdf 12/9/2020 7:18:10
+Parsing Done 12/9/2020 7:18:10
+Accessing File: Snehit Vaddi Resume PDF-1.pdf 12/9/2020 7:18:10
+Partially extracted all features./pdf_files\Snehit Vaddi Resume PDF-1.pdf 12/9/2020 7:18:12
+Parsing Done 12/9/2020 7:18:12
+Accessing File: SumitSChawla_MLDeveloper.pdf 12/9/2020 7:18:12
+Partially extracted all features./pdf_files\SumitSChawla_MLDeveloper.pdf 12/9/2020 7:18:13
+Parsing Done 12/9/2020 7:18:13
 
-#Resume Parser Ended# 11/9/2020 15:21:4
-destroyed pdf_files 11/9/2020 15:21:4
+#Resume Parser Ended# 12/9/2020 7:18:13
+destroyed pdf_files 12/9/2020 7:18:13
 
-#Data Load Started# 11/9/2020 15:21:4
+#Data Load Started# 12/9/2020 7:18:13
 
-Accessing File: Resume.json 11/9/2020 15:21:4
-Data load failure 11/9/2020 15:21:4
+Accessing File: Aditya_Kulkarni_Resume.json 12/9/2020 7:18:13
+Data loaded successfully 12/9/2020 7:18:13
 
-#Data Load Finished# 11/9/2020 15:21:4
-Log Sent 11/9/2020 15:21:4
-$$ Log Load Ended $$ 11/9/2020 15:21:4
-# Dashboard Page Loaded 11/9/2020 15:23:22
-# Dashboard Page Loaded 11/9/2020 15:23:27
-# Dashboard Page Loaded 11/9/2020 15:23:28
-# Dashboard Page Loaded 11/9/2020 15:23:53
-$$ Log Load Started $$ 11/9/2020 15:24:0
+Accessing File: Aishwarya_Swetha_Data_Science.json 12/9/2020 7:18:13
+Data loaded successfully 12/9/2020 7:18:13
 
-#Mail Downloader# 11/9/2020 15:24:0
-Password load successfull 11/9/2020 15:24:0
-destroyed pdf_files 11/9/2020 15:24:0
-created pdf_files 11/9/2020 15:24:0
+Accessing File: Ashwini.resume.json 12/9/2020 7:18:13
+Data loaded successfully 12/9/2020 7:18:13
 
-Credentials Accepted 11/9/2020 15:24:2
-Mail Downloaded from pdf_files/abhay_kumar_visualcv_resume_with_GTC.pdf 11/9/2020 15:24:5
-Mail Downloaded from pdf_files/Abhijit-Manepatil.pdf 11/9/2020 15:24:5
-Mail Downloaded from pdf_files/Abhinav_Abhishek_visualcv_resume (1).pdf 11/9/2020 15:24:5
-Mail Downloaded from pdf_files/Ajay_Kumar_Chouksey_CV.pdf 11/9/2020 15:24:5
-Mail Downloaded from pdf_files/Aniket_cv.pdf 11/9/2020 15:24:5
-Mail logged out ! 11/9/2020 15:24:6
+Accessing File: Deepak Raghavendar CV.json 12/9/2020 7:18:13
+Data loaded successfully 12/9/2020 7:18:13
+
+Accessing File: Merugu's Resume.json 12/9/2020 7:18:13
+Data load failure 12/9/2020 7:18:13
+
+Accessing File: Snehit Vaddi Resume PDF-1.json 12/9/2020 7:18:13
+Data load failure 12/9/2020 7:18:13
+
+Accessing File: SumitSChawla_MLDeveloper.json 12/9/2020 7:18:13
+Data load failure 12/9/2020 7:18:13
+
+#Data Load Finished# 12/9/2020 7:18:13
+Log Sent 12/9/2020 7:18:13
+$$ Log Load Ended $$ 12/9/2020 7:18:13
+$$ Log Load Started $$ 12/9/2020 7:18:38
+
+#Mail Downloader# 12/9/2020 7:18:38
+Password load successfull 12/9/2020 7:18:38
+destroyed pdf_files 12/9/2020 7:18:38
+created pdf_files 12/9/2020 7:18:38
+
+Credentials Accepted 12/9/2020 7:18:40
+Mail Downloaded from pdf_files/Snehit Vaddi Resume PDF-1.pdf 12/9/2020 7:18:42
+Mail Downloaded from pdf_files/Merugu's Resume.pdf 12/9/2020 7:18:43
+Mail Downloaded from pdf_files/Snehit Vaddi Resume PDF-1.pdf 12/9/2020 7:18:43
+Mail Downloaded from pdf_files/SumitSChawla_MLDeveloper.pdf 12/9/2020 7:18:43
+Mail Downloaded from pdf_files/Aditya_Kulkarni_Resume.pdf 12/9/2020 7:18:44
+Mail Downloaded from pdf_files/Aishwarya_Swetha_Data_Science.pdf 12/9/2020 7:18:45
+Mail Downloaded from pdf_files/Ashwini.resume.pdf 12/9/2020 7:18:45
+Mail Downloaded from pdf_files/Deepak Raghavendar CV.pdf 12/9/2020 7:18:45
+Mail logged out ! 12/9/2020 7:18:45
 Updated mail count to the database 
-Exiting mail system 11/9/2020 15:24:6
+Exiting mail system 12/9/2020 7:18:45
 
-#Resume Parser Initiated# 11/9/2020 15:24:6
-destroyed json_files 11/9/2020 15:24:6
+#Resume Parser Initiated# 12/9/2020 7:18:45
+destroyed json_files 12/9/2020 7:18:45
 
-created json_files 11/9/2020 15:24:6
-Accessing File: abhay_kumar_visualcv_resume_with_GTC.pdf 11/9/2020 15:24:6
-Partially extracted all features./pdf_files\abhay_kumar_visualcv_resume_with_GTC.pdf 11/9/2020 15:24:8
-Parsing Done 11/9/2020 15:24:8
-Accessing File: Abhijit-Manepatil.pdf 11/9/2020 15:24:8
-Partially extracted all features./pdf_files\Abhijit-Manepatil.pdf 11/9/2020 15:24:10
-Parsing Done 11/9/2020 15:24:10
-Accessing File: Abhinav_Abhishek_visualcv_resume (1).pdf 11/9/2020 15:24:10
-Partially extracted all features./pdf_files\Abhinav_Abhishek_visualcv_resume (1).pdf 11/9/2020 15:24:12
-Parsing Done 11/9/2020 15:24:12
-Accessing File: Ajay_Kumar_Chouksey_CV.pdf 11/9/2020 15:24:12
-Partially extracted all features./pdf_files\Ajay_Kumar_Chouksey_CV.pdf 11/9/2020 15:24:15
-Parsing Done 11/9/2020 15:24:15
-Accessing File: Aniket_cv.pdf 11/9/2020 15:24:15
-Partially extracted all features./pdf_files\Aniket_cv.pdf 11/9/2020 15:24:17
-Parsing Done 11/9/2020 15:24:17
+created json_files 12/9/2020 7:18:45
+Accessing File: Aditya_Kulkarni_Resume.pdf 12/9/2020 7:18:45
+Partially extracted all features./pdf_files\Aditya_Kulkarni_Resume.pdf 12/9/2020 7:18:47
+Parsing Done 12/9/2020 7:18:47
+Accessing File: Aishwarya_Swetha_Data_Science.pdf 12/9/2020 7:18:47
+Partially extracted all features./pdf_files\Aishwarya_Swetha_Data_Science.pdf 12/9/2020 7:18:49
+Parsing Done 12/9/2020 7:18:49
+Accessing File: Ashwini.resume.pdf 12/9/2020 7:18:49
+Partially extracted all features./pdf_files\Ashwini.resume.pdf 12/9/2020 7:18:50
+Parsing Done 12/9/2020 7:18:50
+Accessing File: Deepak Raghavendar CV.pdf 12/9/2020 7:18:50
+Partially extracted all features./pdf_files\Deepak Raghavendar CV.pdf 12/9/2020 7:18:52
+Parsing Done 12/9/2020 7:18:52
+Accessing File: Merugu's Resume.pdf 12/9/2020 7:18:52
+Partially extracted all features./pdf_files\Merugu's Resume.pdf 12/9/2020 7:18:55
+Parsing Done 12/9/2020 7:18:55
+Accessing File: Snehit Vaddi Resume PDF-1.pdf 12/9/2020 7:18:55
+Partially extracted all features./pdf_files\Snehit Vaddi Resume PDF-1.pdf 12/9/2020 7:18:57
+Parsing Done 12/9/2020 7:18:57
+Accessing File: SumitSChawla_MLDeveloper.pdf 12/9/2020 7:18:57
+Partially extracted all features./pdf_files\SumitSChawla_MLDeveloper.pdf 12/9/2020 7:18:58
+Parsing Done 12/9/2020 7:18:58
 
-#Resume Parser Ended# 11/9/2020 15:24:17
-destroyed pdf_files 11/9/2020 15:24:17
+#Resume Parser Ended# 12/9/2020 7:18:58
+destroyed pdf_files 12/9/2020 7:18:58
 
-#Data Load Started# 11/9/2020 15:24:17
+#Data Load Started# 12/9/2020 7:18:58
 
-Accessing File: abhay_kumar_visualcv_resume_with_GTC.json 11/9/2020 15:24:17
-Data loaded successfully 11/9/2020 15:24:17
+Accessing File: Aditya_Kulkarni_Resume.json 12/9/2020 7:18:58
+Data load failure 12/9/2020 7:18:58
 
-Accessing File: Abhijit-Manepatil.json 11/9/2020 15:24:17
-Data loaded successfully 11/9/2020 15:24:17
+Accessing File: Aishwarya_Swetha_Data_Science.json 12/9/2020 7:18:58
+Data load failure 12/9/2020 7:18:58
 
-Accessing File: Abhinav_Abhishek_visualcv_resume (1).json 11/9/2020 15:24:17
-Data loaded successfully 11/9/2020 15:24:17
+Accessing File: Ashwini.resume.json 12/9/2020 7:18:58
+Data load failure 12/9/2020 7:18:58
 
-Accessing File: Ajay_Kumar_Chouksey_CV.json 11/9/2020 15:24:17
-Data loaded successfully 11/9/2020 15:24:17
+Accessing File: Deepak Raghavendar CV.json 12/9/2020 7:18:58
+Data load failure 12/9/2020 7:18:58
 
-Accessing File: Aniket_cv.json 11/9/2020 15:24:17
-Data loaded successfully 11/9/2020 15:24:17
+Accessing File: Merugu's Resume.json 12/9/2020 7:18:58
+Data load failure 12/9/2020 7:18:58
 
-#Data Load Finished# 11/9/2020 15:24:17
-Log Sent 11/9/2020 15:24:17
-$$ Log Load Ended $$ 11/9/2020 15:24:17
-# Dashboard Page Loaded 11/9/2020 15:24:32
-# Dashboard Page Loaded 11/9/2020 15:25:10
-$$ Log Load Started $$ 11/9/2020 15:25:19
+Accessing File: Snehit Vaddi Resume PDF-1.json 12/9/2020 7:18:58
+Data load failure 12/9/2020 7:18:58
 
-#Mail Downloader# 11/9/2020 15:25:19
-Password load successfull 11/9/2020 15:25:19
-destroyed pdf_files 11/9/2020 15:25:19
-created pdf_files 11/9/2020 15:25:19
+Accessing File: SumitSChawla_MLDeveloper.json 12/9/2020 7:18:58
+Data load failure 12/9/2020 7:18:58
 
-Credentials Accepted 11/9/2020 15:25:22
-Mail Downloaded from pdf_files/abhay_kumar_visualcv_resume_with_GTC.pdf 11/9/2020 15:25:24
-Mail Downloaded from pdf_files/Abhijit-Manepatil.pdf 11/9/2020 15:25:24
-Mail Downloaded from pdf_files/Abhinav_Abhishek_visualcv_resume (1).pdf 11/9/2020 15:25:24
-Mail Downloaded from pdf_files/Ajay_Kumar_Chouksey_CV.pdf 11/9/2020 15:25:24
-Mail Downloaded from pdf_files/Aniket_cv.pdf 11/9/2020 15:25:24
-Mail Downloaded from pdf_files/Divakar's Resume.pdf 11/9/2020 15:25:26
-Mail logged out ! 11/9/2020 15:25:26
-Updated mail count to the database 
-Exiting mail system 11/9/2020 15:25:26
-
-#Resume Parser Initiated# 11/9/2020 15:25:26
-destroyed json_files 11/9/2020 15:25:26
-
-created json_files 11/9/2020 15:25:26
-Accessing File: abhay_kumar_visualcv_resume_with_GTC.pdf 11/9/2020 15:25:26
-Partially extracted all features./pdf_files\abhay_kumar_visualcv_resume_with_GTC.pdf 11/9/2020 15:25:29
-Parsing Done 11/9/2020 15:25:29
-Accessing File: Abhijit-Manepatil.pdf 11/9/2020 15:25:29
-Partially extracted all features./pdf_files\Abhijit-Manepatil.pdf 11/9/2020 15:25:31
-Parsing Done 11/9/2020 15:25:31
-Accessing File: Abhinav_Abhishek_visualcv_resume (1).pdf 11/9/2020 15:25:31
-Partially extracted all features./pdf_files\Abhinav_Abhishek_visualcv_resume (1).pdf 11/9/2020 15:25:33
-Parsing Done 11/9/2020 15:25:33
-Accessing File: Ajay_Kumar_Chouksey_CV.pdf 11/9/2020 15:25:33
-Partially extracted all features./pdf_files\Ajay_Kumar_Chouksey_CV.pdf 11/9/2020 15:25:36
-Parsing Done 11/9/2020 15:25:36
-Accessing File: Aniket_cv.pdf 11/9/2020 15:25:36
-Partially extracted all features./pdf_files\Aniket_cv.pdf 11/9/2020 15:25:38
-Parsing Done 11/9/2020 15:25:38
-Accessing File: Divakar's Resume.pdf 11/9/2020 15:25:38
-Partially extracted all features./pdf_files\Divakar's Resume.pdf 11/9/2020 15:25:41
-Parsing Done 11/9/2020 15:25:41
-
-#Resume Parser Ended# 11/9/2020 15:25:41
-destroyed pdf_files 11/9/2020 15:25:41
-
-#Data Load Started# 11/9/2020 15:25:41
-
-Accessing File: abhay_kumar_visualcv_resume_with_GTC.json 11/9/2020 15:25:41
-Data load failure 11/9/2020 15:25:41
-
-Accessing File: Abhijit-Manepatil.json 11/9/2020 15:25:41
-Data loaded successfully 11/9/2020 15:25:41
-
-Accessing File: Abhinav_Abhishek_visualcv_resume (1).json 11/9/2020 15:25:41
-Data load failure 11/9/2020 15:25:41
-
-Accessing File: Ajay_Kumar_Chouksey_CV.json 11/9/2020 15:25:41
-Data load failure 11/9/2020 15:25:41
-
-Accessing File: Aniket_cv.json 11/9/2020 15:25:41
-Data load failure 11/9/2020 15:25:41
-
-Accessing File: Divakar's Resume.json 11/9/2020 15:25:41
-Data loaded successfully 11/9/2020 15:25:41
-
-#Data Load Finished# 11/9/2020 15:25:41
-Log Sent 11/9/2020 15:25:41
-$$ Log Load Ended $$ 11/9/2020 15:25:41
-
-Mail System triggered 11/9/2020 15:26:57
-Preview mail template loaded 11/9/2020 15:26:57
-Password load successfull 11/9/2020 15:26:57
-Mail Server logged in successfully ! 
-MailSent 11/9/2020 15:27:0
-
-Mail System Ended 11/9/2020 15:27:0
-
-Mail System triggered 11/9/2020 15:27:19
-Interview mail template loaded 11/9/2020 15:27:19
-Password load successfull 11/9/2020 15:27:19
-Mail Server logged in successfully ! 
-MailSent 11/9/2020 15:27:22
-
-Mail System Ended 11/9/2020 15:27:22
-# Dashboard Page Loaded 11/9/2020 15:29:23
-
-Mail System triggered 11/9/2020 15:29:39
-Interview mail template loaded 11/9/2020 15:29:39
-Password load successfull 11/9/2020 15:29:39
-Mail Server logged in successfully ! 
-MailSent 11/9/2020 15:29:42
-
-Mail System Ended 11/9/2020 15:29:42
-# Dashboard Page Loaded 11/9/2020 15:29:57
-
-Mail System triggered 11/9/2020 15:30:8
-Preview mail template loaded 11/9/2020 15:30:8
-Password load successfull 11/9/2020 15:30:9
-Mail Server logged in successfully ! 
-MailSent 11/9/2020 15:30:11
-
-Mail System Ended 11/9/2020 15:30:11
-
-Mail System triggered 11/9/2020 15:30:23
-Interview mail template loaded 11/9/2020 15:30:23
-Password load successfull 11/9/2020 15:30:23
-Mail Server logged in successfully ! 
-MailSent 11/9/2020 15:30:26
-
-Mail System Ended 11/9/2020 15:30:26
-# Dashboard Page Loaded 11/9/2020 15:32:30
-# Dashboard Page Loaded 11/9/2020 15:32:32
-# Dashboard Page Loaded 11/9/2020 15:32:34
-# Dashboard Page Loaded 11/9/2020 15:32:39
-# Dashboard Page Loaded 11/9/2020 15:33:56
-
-Username: admin 11/9/2020 17:14:11
-# Dashboard Page Loaded 11/9/2020 17:14:11
-# Dashboard Page Loaded 11/9/2020 17:14:49
-# Dashboard Page Loaded 11/9/2020 17:16:54
-# Dashboard Page Loaded 11/9/2020 17:16:57
-# Dashboard Page Loaded 11/9/2020 17:16:58
-
-Username: admin 11/9/2020 17:17:4
-# Dashboard Page Loaded 11/9/2020 17:17:4
-
-Username: admin 11/9/2020 17:18:20
-# Dashboard Page Loaded 11/9/2020 17:18:21
-
-Username: admin 11/9/2020 17:36:41
-# Dashboard Page Loaded 11/9/2020 17:36:41
-# Dashboard Page Loaded 11/9/2020 17:38:40
-# Dashboard Page Loaded 11/9/2020 17:39:2
+#Data Load Finished# 12/9/2020 7:18:58
+Log Sent 12/9/2020 7:18:58
+$$ Log Load Ended $$ 12/9/2020 7:18:58
+# Dashboard Page Loaded 12/9/2020 7:19:45
+# Dashboard Page Loaded 12/9/2020 7:20:24
+# Dashboard Page Loaded 12/9/2020 7:20:32
+# Dashboard Page Loaded 12/9/2020 7:21:11
+# Dashboard Page Loaded 12/9/2020 7:21:13
+# Dashboard Page Loaded 12/9/2020 7:21:23
