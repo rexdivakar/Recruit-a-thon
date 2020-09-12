@@ -13,9 +13,6 @@ app = Flask(__name__)
 
 Markdown(app)
 
-p_count = get_project_grp()
-emp_cnt = get_emp_cnt()
-
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -47,19 +44,25 @@ def logout():
 
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dash():
+    p_count = get_project_grp()
+    emp_cnt = get_emp_cnt()
+    salary=get_total_salary()
     notif = get_interview_schedule()
     table_data = json.loads(get_emp_details())
     write_log('# Dashboard Page Loaded')
-    return render_template("dash_board.html", table_data=table_data, label=1, p_count=p_count, emp_cnt=emp_cnt, notif=notif)
+    return render_template("dash_board.html", table_data=table_data, label=1, p_count=p_count, emp_cnt=emp_cnt, notif=notif,salary=salary)
 
 
 @app.route('/incoming', methods=['GET', 'POST'])
 def incoming():
+    p_count = get_project_grp()
+    emp_cnt = get_emp_cnt()
+    salary=get_total_salary()
     notif = get_interview_schedule()
     graph_data = json.loads(graph_dashboard())
     mail_cnt = get_mail_count()
     tdy_cnt = get_tdy_mail_count()
-    return render_template("dash_board.html", graph_data=graph_data, label=2, mail_cnt=mail_cnt, tdy_cnt=tdy_cnt, notif=notif)
+    return render_template("dash_board.html", graph_data=graph_data, label=2, mail_cnt=mail_cnt, tdy_cnt=tdy_cnt, notif=notif,salary=salary)
 
 
 @app.route('/reload', methods=['GET', 'POST'])
@@ -70,10 +73,13 @@ def reload():
 
 @app.route('/team_manag', methods=['GET', 'POST'])
 def team_manag():
+    p_count = get_project_grp()
+    emp_cnt = get_emp_cnt()
+    salary=get_total_salary()
     table_data = json.loads(get_emp_details())
     msg = ''
     notif = get_interview_schedule()
-    return render_template("dash_board.html", table_data=table_data, label=3, p_count=p_count, emp_cnt=emp_cnt, notif=notif, msg=msg)
+    return render_template("dash_board.html", table_data=table_data, label=3, p_count=p_count, emp_cnt=emp_cnt, notif=notif, msg=msg,salary=salary)
 
 
 @app.route('/hiring', methods=['GET', 'POST'])
@@ -214,7 +220,10 @@ Beside's programming, I enjoy eating food and travelling.
 @app.route('/add_cand', methods=['GET', 'POST'])
 def add_cand():
     table_data = json.loads(get_emp_details())
+    p_count = get_project_grp()
+    emp_cnt = get_emp_cnt()
     if request.method == 'POST':
+        p_count = get_project_grp()
         c_id = request.form['id']
         salary = request.form['salary']
         pro_code = request.form['pro_code']
