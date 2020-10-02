@@ -9,9 +9,20 @@ import time
 from log_load import verify
 from extra import write_log
 from flaskext.markdown import Markdown
+import atexit
+
+from apscheduler.schedulers.background import BackgroundScheduler
+
 app = Flask(__name__)
 
 Markdown(app)
+
+scheduler = BackgroundScheduler()
+scheduler.add_job(func=lambda: email_content(3,'rexdivakar@hotmail.com'), trigger="interval", minutes=1)
+scheduler.start()
+
+# Shut down the scheduler when exiting the app
+atexit.register(lambda: scheduler.shutdown())
 
 
 @app.route('/', methods=['GET', 'POST'])
