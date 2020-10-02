@@ -342,6 +342,8 @@
           position: relative;
           margin-top: -550px;
           padding-left: 18%;
+          margin-left: 1%;
+          margin-right: 1%;
         }
         .msg{
           margin:auto auto;
@@ -350,13 +352,15 @@
         .um-1{
           width:49%;
           padding: 10px 10px;
-          height: 70%;
+          /* height: 70%; */
           display: inline-block;
+          z-index: -1;
         }
         .um-2{
           float:right;
           width:49%;
           height: 70%;
+          /* margin-left: 230px; */
           margin-right: 1px;
           padding: 10px 10px;
         }
@@ -520,12 +524,12 @@
                     <div>
                     </div>
                   </div>
-                {% if msg!='' %}
-                <div class="um-1" style="margin-left: 25%;">
-                    <h2>{{msg}}</h2>
-                </div>
+                  {% if msg!='' %}
+                  <div class="um-1" style="position: absolute; left: 18%;">
+                      <h2>{{msg}}</h2>
+                  </div>
                 {% endif %}
-                  <div class="dashboard-table">
+                  <div class="dashboard-table" style="margin-top: -35%;">
                     <table id="example" class="table table-striped table-bordered nowrap">
                     <thead>
                         <tr>
@@ -558,7 +562,7 @@
 
                 {% elif label==4:%}
                 <br><br><br>
-                  <div style="width: 50%">
+                  <div style="width: 50%; margin-top: -5%;">
                     <table id="example" class="table table-striped table-bordered nowrap">
                       <thead>
                           <tr>
@@ -577,12 +581,12 @@
                       <tbody>
                       </table>
                   </div> 
-                  <div class="w3-container w3-teal" style="width: 49%;margin-top:-27%;float: right;">
+                  <div class="w3-container w3-teal" style="width: 49%;margin-top:-47%;float: right;">
                     <h1>Search for Candidate</h1>
                   </div>
 
                   <div style="float: right;
-                  width:49%;height: 20%;margin-top:-20%;">
+                  width:49%;height: 20%;margin-top:-38%;">
                   <form class="w3-container" action="/hiring_result" method="POST">
                       
                       <label class="w3-text-teal"><b>Candidate id</b></label>            
@@ -590,7 +594,7 @@
                     <input class="w3-btn w3-blue-grey" type="submit" name="Search"> 
                   </form>   
                   </div>
-                  <div class="w3-container w3-teal" style="width: 50%">
+                  <div class="w3-container w3-teal" style="width: 50%;">
                   <h1>Call for Interview</h1>
                 </div>
                   <div style="float: left;width: 50%;"><br>
@@ -606,18 +610,18 @@
                     
                   </div>
                   {% if report!='' and msg!=''%}
-                  <div class="w3-container w3-teal" style="width: 49%;margin-top:-15%;float: right;">
+                  <div class="w3-container w3-teal" style="width: 49%;margin-top:-30%;float: right;">
                     <h1>Consolidated Report</h1>
                   </div>
 
                   <div class="w3-container" style="text-align:center;float: right; padding-top: 2%;
-                  width:49%;margin-top: -10%;"> 
+                  width:49%;margin-top: -25%;"> 
                   {% for key, value in report[0].items(): %}
                   <p style="font-size: 15px;">{{key}} :- {{value}}</p>
                   {% endfor %}
                   </div>
                   {% else %}
-                  <div class="w3-container w3-teal" style="width: 49%;margin-top:-15%;float: right;">
+                  <div class="w3-container w3-teal" style="width: 49%;margin-top:-30%;float: right;">
                   <h3 style="text-align:center;">{{msg}}</h3>
                   </div>
                   {% endif%}
