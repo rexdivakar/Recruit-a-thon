@@ -8,4 +8,4 @@ def timed_job():
     email_content(3,'rexdivakar@hotmail.com')
     print("EMAIL SENT TO ADMIN!")
     
-# timed_job()
+timed_job()
