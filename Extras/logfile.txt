@@ -197,3 +197,126 @@ Username: admin 12/9/2020 10:1:52
 # Dashboard Page Loaded 12/9/2020 10:38:10
 # Dashboard Page Loaded 12/9/2020 10:55:25
 # Dashboard Page Loaded 12/9/2020 10:55:30
+
+$Invalid Credentials by:  2/10/2020 16:8:57
+
+$Invalid Credentials by: sdasdas 2/10/2020 16:9:14
+
+$Invalid Credentials by: sdasdsa 2/10/2020 16:9:32
+
+$Invalid Credentials by: asdasd 2/10/2020 16:11:35
+
+$Invalid Credentials by: asdasd 2/10/2020 16:12:5
+
+$Invalid Credentials by: asdas 2/10/2020 16:12:28
+
+$Invalid Credentials by: asdas 2/10/2020 16:12:53
+
+$Invalid Credentials by: asdas 2/10/2020 16:12:57
+
+$Invalid Credentials by: sdfsd 2/10/2020 16:14:0
+
+$Invalid Credentials by: sdfsd 2/10/2020 16:14:33
+
+$Invalid Credentials by: sdfsd 2/10/2020 16:14:46
+
+$Invalid Credentials by: sdfsd 2/10/2020 16:15:8
+
+$Invalid Credentials by: sdfsd 2/10/2020 16:15:22
+
+$Invalid Credentials by: sadas 2/10/2020 16:15:27
+
+Username: admin 2/10/2020 16:15:47
+# Dashboard Page Loaded 2/10/2020 16:15:47
+# Dashboard Page Loaded 2/10/2020 16:19:7
+# Dashboard Page Loaded 2/10/2020 16:19:19
+# Dashboard Page Loaded 2/10/2020 16:19:32
+# Dashboard Page Loaded 2/10/2020 16:20:15
+# Dashboard Page Loaded 2/10/2020 16:20:49
+# Dashboard Page Loaded 2/10/2020 16:32:55
+# Dashboard Page Loaded 2/10/2020 16:33:27
+# Dashboard Page Loaded 2/10/2020 16:35:35
+$$ Log Load Started $$ 2/10/2020 16:43:28
+
+#Mail Downloader# 2/10/2020 16:43:28
+Password load successfull 2/10/2020 16:43:28
+destroyed pdf_files 2/10/2020 16:43:28
+created pdf_files 2/10/2020 16:43:28
+
+Credentials Accepted 2/10/2020 16:43:30
+Mail logged out ! 2/10/2020 16:43:31
+Updated mail count to the database 
+Exiting mail system 2/10/2020 16:43:31
+
+#Resume Parser Initiated# 2/10/2020 16:43:32
+destroyed json_files 2/10/2020 16:43:32
+
+created json_files 2/10/2020 16:43:32
+
+#Resume Parser Ended# 2/10/2020 16:43:32
+destroyed pdf_files 2/10/2020 16:43:32
+
+#Data Load Started# 2/10/2020 16:43:32
+
+#Data Load Finished# 2/10/2020 16:43:32
+Log Sent 2/10/2020 16:43:32
+$$ Log Load Ended $$ 2/10/2020 16:43:32
+
+Mail System triggered 2/10/2020 16:51:36
+Preview mail template loaded 2/10/2020 16:51:36
+Password load successfull 2/10/2020 16:51:37
+Mail Server logged in successfully ! 
+MailSent 2/10/2020 16:51:40
+
+Mail System Ended 2/10/2020 16:51:40
+
+Mail System triggered 2/10/2020 16:51:56
+Preview mail template loaded 2/10/2020 16:51:56
+Password load successfull 2/10/2020 16:51:57
+Mail Server logged in successfully ! 
+MailSent 2/10/2020 16:52:0
+
+Mail System Ended 2/10/2020 16:52:0
+
+Mail System triggered 2/10/2020 16:52:7
+Preview mail template loaded 2/10/2020 16:52:7
+Password load successfull 2/10/2020 16:52:7
+Mail Server logged in successfully ! 
+MailSent 2/10/2020 16:52:10
+
+Mail System Ended 2/10/2020 16:52:10
+
+Mail System triggered 2/10/2020 16:52:19
+Preview mail template loaded 2/10/2020 16:52:19
+Password load successfull 2/10/2020 16:52:19
+Mail Server logged in successfully ! 
+MailSent 2/10/2020 16:52:22
+
+Mail System Ended 2/10/2020 16:52:22
+
+Mail System triggered 2/10/2020 16:52:54
+Preview mail template loaded 2/10/2020 16:52:54
+Password load successfull 2/10/2020 16:52:55
+Mail Server logged in successfully ! 
+MailSent 2/10/2020 16:52:58
+
+Mail System Ended 2/10/2020 16:52:58
+
+Mail System triggered 2/10/2020 16:53:10
+Preview mail template loaded 2/10/2020 16:53:10
+Password load successfull 2/10/2020 16:53:10
+Mail Server logged in successfully ! 
+MailSent 2/10/2020 16:53:13
+
+Mail System Ended 2/10/2020 16:53:13
+
+Mail System triggered 2/10/2020 16:53:39
+Interview mail template loaded 2/10/2020 16:53:39
+Password load successfull 2/10/2020 16:53:40
+Mail Server logged in successfully ! 
+MailSent 2/10/2020 16:53:43
+
+Mail System Ended 2/10/2020 16:53:43
+# Dashboard Page Loaded 2/10/2020 16:54:14
+# Dashboard Page Loaded 2/10/2020 17:0:8
+# Dashboard Page Loaded 2/10/2020 17:2:21

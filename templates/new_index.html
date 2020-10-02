@@ -156,9 +156,9 @@
     }
 
     .typcn {
-      position: absolute;
+      /* position: absolute;
       left: 339px;
-      top: 282px;
+      top: 282px; */
       color: #3b476b;
       font-size: 22px;
       cursor: pointer;
@@ -167,15 +167,28 @@
     .typcn.active {
       color: #7f60eb;
     }
+    
+    .password-toggle{
+      position: relative;
+      bottom: 60px;
+      left: 35%;
+    }
     .inactive {
       display: none;
     }
     #signin-text {
-      margin-bottom: 70px;
+      margin-bottom: 50px;
     } 
 
     #signup-text {
       left: 30%;
+    }
+
+    .error-text{
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translateX(-50%);
     }
   </style>
   <script>
@@ -249,16 +262,21 @@
   <div class="animated bounceInDown">
     <div class="container">
       {% if error!="Please contact your admin"%}
+      
+      {%if error!=""%}
+      <p class="error-text" style="color: white">{{error}}</p>
+    {% endif%}
       <form name="form1" id="formlogin" method="POST" action="/" class="box" onsubmit="return checkStuff(0)">
         <h4 style="font-size:35px;">Recruit'em<span> Login</span></h4>
         <h5 id="signin-text">Sign in to your account.</h5>
+
+        
         <input type="text" name="loginuser" placeholder="Username" autocomplete="off">
-        <i class="typcn typcn-eye" id="eye"></i>
-        <input type="password" name="loginPassword" placeholder="Passsword" id="pwd" autocomplete="off">
+        <input type="password" name="loginPassword" placeholder="Password" id="pwd" autocomplete="off">
+        <span class="password-toggle"><i class="typcn typcn-eye" id="eye"></i>
+        </span>
         <input type="submit" value="Sign in" class="btn1">
-          {%if error!=""%}
-          <p style="color: white">{{error}}</p>
-          {% endif%}
+          
         <a href="signup" class="dnthave" id="signup-text" onclick="toggle(1)">Don’t have an account? Sign up</a>
         {% else%}
         <p style="color: white;padding-top:40%;font-size: 24px;">{{error}}</p>
@@ -268,15 +286,15 @@
     </div>
   </div>
   <script>    
-    const eyes = document.querySelectorAll('#eye')
-
-    for(const eye of eyes) {
-      eye.addEventListener('click', togglePass);
-    }
+    const eye = document.getElementById("eye");
+    eye.addEventListener('click',togglePass);
+    // for(const eye of eyes) {
+    //   eye.addEventListener('click', togglePass);
+    // }
 
     function togglePass(e) {
       const eye = e.target;
-      const pwd = eye.nextElementSibling;
+      const pwd = document.getElementById("pwd");
 
       eye.classList.toggle('active');
 
