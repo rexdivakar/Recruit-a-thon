@@ -9,10 +9,39 @@ import time
 from log_load import verify
 from extra import write_log
 from flaskext.markdown import Markdown
+import atexit
+import threading
+
 app = Flask(__name__)
 
 Markdown(app)
 
+POOL_TIME = 60 #Seconds
+
+# lock to control access to variable
+dataLock = threading.Lock()
+# thread handler
+yourThread = threading.Thread()
+
+def doStuff():
+    global yourThread
+    with dataLock:
+        email_content(3,'rexdivakar@hotmail.com')
+        print("\nRunning in BG!\n")
+    yourThread = threading.Timer(POOL_TIME, doStuff, ())
+    yourThread.start()  
+
+def doStuffStart():
+    # Do initialisation stuff here
+    global yourThread
+    # Create your thread
+    yourThread = threading.Timer(POOL_TIME, doStuff, ())
+    yourThread.start()
+
+# Initiate Thread
+doStuffStart()
+# When you kill Flask (SIGTERM), clear the trigger for the next thread
+atexit.register(lambda: yourThread.cancel())
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
